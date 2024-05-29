@@ -13,7 +13,7 @@
         "artesaos/seotools": "^0.22.0",
         "barryvdh/laravel-dompdf": "^2.0",
         "cocur/slugify": "4.2",
-        "cviebrock/eloquent-sluggable": "^8.0",
+        "cviebrock/eloquent-sluggable": "^10.0",
         "doctrine/dbal": "^3.4",
         "dragon-code/contracts": "2.19.1",
         "fakerphp/faker": "^1.20",
