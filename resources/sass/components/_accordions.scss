@@ -1,0 +1,224 @@
+.accordion-main-container{
+    padding: 0;
+    margin: 0;
+    .accordion{
+        padding: 0;
+        margin: 0;
+        &-title {
+            p {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: $color-text-black;
+				font-family: $font-sans-bold;
+                @include fontsize-16();
+                cursor: pointer;
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 12px;
+                    height: 12px;
+                    background-image: url('../images/icon-arrow.svg');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    @include background-size(contain);
+                    transform: rotate(0);
+                    transition: .3s;
+                }
+                &.active {
+                    &:after {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+        .card{
+            padding: 0;
+            margin: 0;
+            @include box-shadow(none);
+            border:0;
+            background: none;
+            outline:0;
+            @include border-radius(0);
+            overflow: unset;
+            .card-collapse{
+                .card-body{
+                    padding: 15px 0 15px 30px;
+                    margin: 0;
+                    border:0;
+                    outline:0;
+                    background: #fff;
+                    @include box-shadow(none);
+                    @include border-radius-separate(0, 0, 6px, 6px);
+                    @include media(992) {
+                        padding: 16px 0 16px 40px;
+                    }
+                    .quizzes-show-results-lists-container{
+                        >ul{
+                            padding: 0;
+                            margin: 0;
+                            list-style:none;
+                            outline:0;
+                            border:0;
+                            @include box-shadow(none);
+                            >li{
+                                margin: 12px 0 0 0;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                padding: 12px 32px;
+                                border:0;
+                                @include box-shadow(none);
+                                outline:0;
+                                background: $color-bg-white;
+                                @include border-radius(4px);
+                                border:1px solid $color-border-main;
+                                width: 100%;
+                                color: $color-text-black;
+                                @include fontsize-15();
+                                font-family: $font-sans-default;
+                                @include border-radius(4px);
+                                @include media(992) {
+                                    @include fontsize-17();
+                                }
+                                >span{
+                                    padding: 0;
+                                    margin: 0;
+                                    display: inline-flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    &.letter{
+                                        margin: 0 12px 0 0;
+                                        min-width: 15px;
+                                        font-family: $font-sans-bold;
+                                    }
+                                    &.text{
+                                        padding: 0 15px 0 0;
+                                        margin: 0;
+                                    }
+                                    &.icon{
+                                        margin: 0 0 0 auto;
+                                        min-width: 18px;
+                                    }
+                                }
+                                &.--success{
+                                    background: $color-state-success-light;
+                                    border-color: $color-state-success;
+                                }
+                                &.--choice-danger{
+                                    background: $color-state-error-light;
+                                    border-color: $color-state-error;
+                                }
+                                &.--danger{
+                                    background: $color-state-error-light;
+                                    border-color: $color-state-error;
+                                }
+                                &:first-child{
+                                    margin-top: 0;
+                                }
+                            }
+                        }  
+                    }
+                }
+            }
+            .card-header{
+                padding: 0;
+                margin: 0;
+                background: none;
+                border:0;
+                outline:0;
+                @include box-shadow(none);
+                >button{
+                    padding: 15px 15px;
+                    margin: 0;
+                    background: #fff;
+                    border:1px solid $color-border-main;
+                    outline:0;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    @include border-radius(8px);
+                    @include box-shadow(none);
+                    @include media(992) {
+                        padding: 18px 24px;
+                    }
+                    >span{
+                        &.text{
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            flex-direction: row;
+                            padding: 0;
+                            margin: 0 auto 0 0;
+                            text-align: left;
+                            .number{
+                                padding: 0;
+                                margin: 0 4px 0 0;
+                                color: $color-text-black;
+                                @include fontsize-16();
+                                font-family: $font-sans-bold;
+                            }
+                            .info{
+                                padding: 0;
+                                margin: 0;
+                                .name{
+                                    color: $color-text-black;
+                                    @include fontsize-16();
+                                    font-family: $font-sans-bold;
+                                    padding: 0;
+                                    margin: 0;
+                                }
+                                .note{
+                                    padding: 0;
+                                    margin: 6px 0 0 0;
+                                    color: $color-text-grey;
+                                    @include fontsize-14();
+                                    font-family: $font-sans-default;
+                                }
+                            }
+                        }
+                        &.icon{
+                            min-height: 24px;
+                            margin: 0 20px 0 0;
+                            min-width: 20px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            >svg{
+                                height: auto;
+                                max-height: 18px;
+                                width: 100%;
+                                fill: $color-text-black;
+                            }
+                            &.icon-chevron{
+                                width: 24px;
+                                height: 24px;
+                                margin: 0 0 0 auto;
+                                >svg{
+                                    width: 14px;
+                                    height: 8px;
+                                    fill: $color-text-black;
+                                }
+                            }
+                        }
+                    }
+                    &[aria-expanded="true"]{
+                        >span{
+                            &.icon{
+                                &.icon-chevron{
+                                    >svg{
+                                        @include rotate(180);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:disabled{
+                        cursor: default;
+                    }
+                }
+            }
+        }
+    }
+}

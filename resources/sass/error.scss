@@ -1,0 +1,202 @@
+// @import 'libraries/bootstrap';
+@import 'libraries/normalize/default';
+
+@import 'variables/styles';
+@import 'variables/variables';
+@import 'variables/fonts';
+
+@import 'components/fonts';
+@import 'components/html';
+
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+.main{
+    background: $color-bg-white;
+    padding: 32px 15px;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    @include media(576) {
+        padding: 32px 32px;
+    }
+}
+.main-body-container{
+    &.--error-page{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+        background: $color-bg-white;
+        @include border-radius(4px);
+        margin: 0 auto;
+    }
+}
+.error-text{
+    width: 100%;
+    @include fontsize-17();
+    font-family: $font-sans-default;
+    padding: 0;
+    margin: 0 0 0 0;
+    color: $color-text-dark-grey;
+    text-align: center;
+}
+.error-description{
+    width: 100%;
+    @include fontsize-15();
+    font-family: $font-sans-default;
+    padding: 0;
+    margin: 32px 0 0 0;
+    color: $color-text-dark-grey;
+    text-align: center;
+}
+ul{
+    &.browser-lists{
+        padding: 0;
+        margin: 0 -15px;
+        list-style-type:none;
+        outline:0;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        >li{
+            position: relative;
+            flex-basis: 0;
+            flex-grow: 1;
+            padding: 0 20px;
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+            margin: 32px 0 25px 0;
+            box-sizing: border-box;
+            >a{
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 0;
+                margin: 0;
+                text-decoration: none;
+                outline:0;
+                >span{
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0;
+                    margin: 0;
+                    &.icon{
+                        margin-bottom: 8px;
+                        max-width: 64px;
+                        >img{
+                            width: 48px;
+                            height: 48px;
+                            margin: 0 auto;
+                        }
+                    }
+                    &.text{
+                        color: $color-text-dark-grey;
+                        @include fontsize-15();
+                    }
+                }
+                &:hover{
+                    >span{
+                        &.text{
+                            color: $color-special-purple;
+                        }
+                    }
+                }
+            }
+            &:nth-child(-n+3){
+                margin-top: 0;
+            }
+        }
+    }
+}
+.error-code{
+    width: 100%;
+    @include fontsize-24();
+    font-family: $font-sans-bold;
+    color: $color-text-dark;
+    padding: 0;
+    margin: 0 0 4px 0;
+    text-align: center;
+    @include media(576) {
+        @include fontsize-32();
+    }
+}
+.error-actions{
+    width: 100%;
+    padding: 0;
+    margin: 24px 0 0 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    >a{
+        padding: 12px 15px;
+        margin: 0;
+        border: 0;
+        background: $color-special-purple;
+        color: $color-text-white;
+        @include box-shadow(none);
+        outline:0;
+        @include border-radius(4px);
+        text-decoration: none;
+        font-family: $font-sans-bold;
+        @include fontsize-15();
+        min-width: 105px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        @include media(768) {
+            padding: 12px 32px;
+        }
+        >span{
+            &.text{
+                color:inherit;
+            }
+            &.icon{
+                margin: 0 12px 0 0;
+                padding: 0;
+            }
+        }
+        &:hover{
+            @include box-shadow(none);
+            // background-image: linear-gradient(rgba($color-text-black, .1),rgba($color-text-black, .1));
+            background-image: linear-gradient(rgba($color-state-hover, .3),rgba($color-state-hover, .3));
+            &:active{
+                // background-image: linear-gradient(rgba($color-text-black, .2),rgba($color-text-black, .2));
+                background-image: linear-gradient(rgba($color-state-hover, .3),rgba($color-state-hover, .3));
+            }
+        }
+        &:active{
+            @include box-shadow(none);
+            // background-image: linear-gradient(rgba($color-text-black, .2),rgba($color-text-black, .2));
+            background-image: linear-gradient(rgba($color-state-hover, .3),rgba($color-state-hover, .3));
+        }
+        &[disabled],
+        &.--disabled{
+            color: $color-text-white;
+            background: $color-bg-disabled;
+            cursor: default;
+            &:hover{
+                background-image: none;
+                &:active{
+                    background-image: none;
+                }
+            }
+            &:active{
+                background-image: none;
+            }
+        }
+    }
+}

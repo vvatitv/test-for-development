@@ -1,0 +1,1282 @@
+main{
+    &.main{
+        .main-body-container{
+            .main-page-container{
+                &.--page-tasks{
+                    background: none;
+                    .page-body{
+                        .tasks-main-container{
+                            padding: 0;
+                            margin: 0;
+                            .tasks-lists-container{
+                                padding: 0 0 0 0;
+                                margin: 0 0 0 0;
+                                .tabs-container{
+                                    >.tab-content{
+                                        .tab-pane{
+                                            .row{
+                                                .col{
+                                                    margin-bottom: 20px;
+                                                    .card{
+                                                        padding: 24px 24px;
+                                                        margin: 0;
+                                                        border:0;
+                                                        background: $color-bg-white;
+                                                        @include box-shadow(none);
+                                                        @include border-radius(4px);
+                                                        .card-body{
+                                                            padding: 24px 0 0 0;
+                                                            margin: 0;
+                                                            background: none;
+                                                            border:0;
+                                                            @include box-shadow(none);
+                                                            color: $color-text-dark-grey;
+                                                            font-family: $font-sans-default;
+                                                            @include fontsize-15();
+                                                            a{
+                                                                color: $color-text-link;
+                                                                text-decoration: none;
+                                                                outline:0;
+                                                                display: inline-flex;
+                                                                cursor: pointer;
+                                                                &:hover{
+                                                                    text-decoration: underline;
+                                                                }
+                                                            }
+                                                            >p{
+                                                                margin-bottom: 12px;
+                                                                &:last-child{
+                                                                    margin-bottom: 0;
+                                                                }
+                                                            }
+                                                            .card-body-label{
+                                                                padding: 0;
+                                                                margin: 0 0 20px 0;
+                                                                ul{
+                                                                    padding: 0;
+                                                                    margin: 0 -15px;
+                                                                    list-style:none;
+                                                                    >li{
+                                                                        padding: 0 15px;
+                                                                        margin: 0;
+                                                                        display: flex;
+                                                                        align-items: center;
+                                                                        justify-content: flex-start;
+                                                                        font-family: $font-sans-default;
+                                                                        @include fontsize-13();
+                                                                        >span{
+                                                                            display: inline-flex;
+                                                                            align-items: center;
+                                                                            justify-content: center;
+                                                                            padding: 0;
+                                                                            margin: 0;
+                                                                            &.icon{
+                                                                                width: 20px;
+                                                                                height: 20px;
+                                                                                min-width: 20px;
+                                                                                >svg{
+                                                                                    display: block;
+                                                                                    margin: 0 auto;
+                                                                                    max-width: 100%;
+                                                                                    height: auto;
+                                                                                }
+                                                                                & + .text{
+                                                                                    margin-left: 8px;
+                                                                                }
+                                                                            }
+                                                                            &.text{
+                                                                                & + .icon{
+                                                                                    margin-left: 8px;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        &.--pink{
+                                                                            color: $color-special-pink;
+                                                                        }
+                                                                        &.--purple{
+                                                                            color: $color-special-purple;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        .card-header-tracks{
+                                                            padding: 0 0 16px 0;
+                                                            margin: 0;
+                                                            border-bottom: 1px solid $color-border-main;
+                                                            ul{
+                                                                padding: 0;
+                                                                margin: 0;
+                                                                list-style:none;
+                                                                display: block;
+                                                                >li{
+                                                                    padding: 4px 8px;
+                                                                    margin: 6px 0 0 0;
+                                                                    display: flex;
+                                                                    align-items: center;
+                                                                    justify-content: flex-start;
+                                                                    flex-direction: row;
+                                                                    @include border-radius-separate(4px, 4px, 4px, 4px);
+                                                                    background: $color-tracks-100;
+                                                                    color: $color-tracks-200;
+                                                                    font-family: $font-sans-bold;
+                                                                    @include fontsize-14();
+                                                                    >span{
+                                                                        padding: 0;
+                                                                        margin: 0;
+                                                                        display: inline-flex;
+                                                                        align-items: center;
+                                                                        justify-content: center;
+                                                                        &.icon{
+                                                                            width: 32px;
+                                                                            height: 32px;
+                                                                            min-width: 32px;
+                                                                            margin: 0 0 0 auto;
+                                                                            @include border-radius-separate(100%, 100%, 100%, 100%);
+                                                                            background: $color-tracks-200;
+                                                                            color: $color-text-white;
+                                                                            text-transform: uppercase;
+                                                                        }
+                                                                    }
+                                                                    &.--track-project-experience{
+                                                                        background: $color-tracks-100;
+                                                                        color: $color-tracks-200;
+                                                                        >span{
+                                                                            &.icon{
+                                                                                background: $color-tracks-200;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    &.--track-project-culture{
+                                                                        background: $color-tracks-300;
+                                                                        color: $color-tracks-400;
+                                                                        >span{
+                                                                            &.icon{
+                                                                                background: $color-tracks-400;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    &.--track-project-solution{
+                                                                        background: $color-tracks-500;
+                                                                        color: $color-tracks-600;
+                                                                        >span{
+                                                                            &.icon{
+                                                                                background: $color-tracks-600;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    &:first-child{
+                                                                        margin-top: 0;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        .card-header{
+                                                            padding: 0 0 16px 0;
+                                                            margin: 0 0 0 0;
+                                                            background: none;
+                                                            border:0;
+                                                            @include box-shadow(none);
+                                                            display: flex;
+                                                            align-items: center;
+                                                            justify-content: flex-start;
+                                                            border-bottom: 1px solid $color-border-main;
+                                                            >span{
+                                                                &.icon{
+                                                                    padding: 0;
+                                                                    margin: 0 12px 0 0;
+                                                                    width: 24px;
+                                                                    height: 24px;
+                                                                    display: inline-flex;
+                                                                    align-items: center;
+                                                                    justify-content: center;
+                                                                    >img{
+                                                                        margin: 0 auto;
+                                                                    }
+                                                                }
+                                                                &.text{
+                                                                    display: inline-flex;
+                                                                    align-items: center;
+                                                                    justify-content: flex-start;
+                                                                    font-family: $font-sans-bold;
+                                                                    @include fontsize-17();
+                                                                    padding: 0;
+                                                                    margin: 0;
+                                                                    color: $color-text-black;
+                                                                }
+                                                            }
+                                                            &.--width-tracks-name{
+                                                                border-bottom: 0;
+                                                            }
+                                                        }
+                                                        .card-footer{
+                                                            padding: 24px 0 0 0;
+                                                            margin: 0;
+                                                            background: none;
+                                                            border:0;
+                                                            @include box-shadow(none);
+                                                            .card-box-container{
+                                                                padding: 0;
+                                                                margin: 0;
+                                                                .card-box-dialog{
+                                                                    .card-box-body{
+                                                                        .form-main-container{
+                                                                            >form{
+                                                                                >.form-group{
+                                                                                    margin-bottom: 20px;
+                                                                                    .form-field{
+                                                                                        >label{
+                                                                                            font-family: $font-sans-bold;
+                                                                                            @include fontsize-15();
+                                                                                            color: $color-text-black;
+                                                                                            padding: 0;
+                                                                                            margin: 0 0 8px 0;
+                                                                                            @include media(1200) {
+                                                                                                @include fontsize-17();
+                                                                                            }
+                                                                                        }
+                                                                                        textarea{
+                                                                                            min-height: 256px;
+                                                                                            &.--small{
+                                                                                                min-height: 98px;
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                    &.--submit{
+                                                                                        margin: 32px 0 24px 0;
+                                                                                        >ul{
+                                                                                            >li{
+                                                                                                width: 100%;
+                                                                                                .--button-submit{
+                                                                                                    width: 100%;
+                                                                                                }
+                                                                                                .v-popover{
+                                                                                                    .trigger{
+                                                                                                        width: 100%;
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            .tasks-complete-container{
+                                                                padding: 0;
+                                                                margin: 0;
+                                                                display: flex;
+                                                                align-items: center;
+                                                                justify-content: flex-start;
+                                                                flex-direction: row;
+                                                                .text{
+                                                                    padding: 0 0 0 15px;
+                                                                    margin: 0 0 0 auto;
+                                                                    display: inline-flex;
+                                                                    align-items: center;
+                                                                    justify-content: flex-end;
+                                                                }
+                                                                .status{
+                                                                    padding: 0 15px 0 0;
+                                                                    margin: 0;
+                                                                    display: inline-flex;
+                                                                    align-items: center;
+                                                                    justify-content: flex-start;
+                                                                    .icon{
+                                                                        padding: 0;
+                                                                        margin: 0 12px 0 0;
+                                                                        display: inline-flex;
+                                                                        align-items: center;
+                                                                        justify-content: center;
+                                                                        width: 24px;
+                                                                        height: 24px;
+                                                                    }
+                                                                    .text{
+                                                                        padding: 0;
+                                                                        margin: 0;
+                                                                        color: $color-state-success;
+                                                                        font-family: $font-sans-default;
+                                                                        @include fontsize-13();
+                                                                    }
+                                                                    &.--warning{
+                                                                        .icon{
+                                                                            >svg{
+                                                                                path{
+                                                                                    &.--icon-svg-round{
+                                                                                        fill: $color-special-yellow;
+                                                                                    }
+                                                                                    &.--icon-svg-icon{
+                                                                                        fill: $color-text-white;
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        .text{
+                                                                            color: $color-special-yellow;
+                                                                        }
+                                                                    }
+                                                                }
+                                                                .text,
+                                                                .status{
+                                                                    .--link-icon-arrow-rightup{
+                                                                        padding: 0;
+                                                                        margin: 0;
+                                                                        text-decoration: none;
+                                                                        outline:0;
+                                                                        display: inline-flex;
+                                                                        align-items: center;
+                                                                        justify-content: center;
+                                                                        @include box-shadow(none);
+                                                                        background: none;
+                                                                        .icon{
+                                                                            display: inline-flex;
+                                                                            align-items: center;
+                                                                            justify-content: center;
+                                                                            padding: 0;
+                                                                            margin: 0 0 0 12px;
+                                                                            width: 16px;
+                                                                            height: 16px;
+                                                                            >svg{
+                                                                                fill: $color-text-link;
+                                                                                max-width: 100%;
+                                                                            }
+                                                                        }
+                                                                        .text{
+                                                                            color: $color-text-link;
+                                                                            @include fontsize-13();
+                                                                            font-family: $font-sans-default;
+                                                                            padding: 0;
+                                                                            margin: 0;
+                                                                            display: inline-flex;
+                                                                            align-items: center;
+                                                                            justify-content: center;
+                                                                        }
+                                                                        &:hover{
+                                                                            .text{
+                                                                                text-decoration: underline;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    .--link-icon-file-attach{
+                                                                        padding: 0;
+                                                                        margin: 0;
+                                                                        text-decoration: none;
+                                                                        outline:0;
+                                                                        display: inline-flex;
+                                                                        align-items: center;
+                                                                        justify-content: center;
+                                                                        background: none;
+                                                                        @include box-shadow(none);
+                                                                        .icon{
+                                                                            display: inline-flex;
+                                                                            align-items: center;
+                                                                            justify-content: center;
+                                                                            padding: 0;
+                                                                            margin: 0 12px 0 0;
+                                                                            width: 32px;
+                                                                            height: 32px;
+                                                                            background: $color-bg-blue-grey;
+                                                                            @include border-radius(2px);
+                                                                            >svg{
+                                                                                fill: $color-text-black;
+                                                                                max-width: 100%;
+                                                                            }
+                                                                        }
+                                                                        .text{
+                                                                            padding: 0;
+                                                                            margin: 0;
+                                                                            color: $color-text-grey;
+                                                                            @include fontsize-13();
+                                                                            font-family: $font-sans-default;
+                                                                        }
+                                                                        &:hover{
+                                                                            .text{
+                                                                                text-decoration: underline;
+                                                                            }
+                                                                        }
+                                                                        &.--alternative{
+                                                                            .text{
+                                                                                color: $color-text-link;
+                                                                            }
+                                                                            .icon{
+                                                                                background: none;
+                                                                                width: 24px;
+                                                                                height: 24px;
+                                                                                >svg{
+                                                                                    fill: $color-special-purple;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            .form-main-container{
+                                                                padding: 0;
+                                                                margin: 32px 0 0 0;
+                                                                >.form-group{
+                                                                    >ul{
+                                                                        display: flex;
+                                                                        align-items: center;
+                                                                        justify-content: center;
+                                                                        >li{
+                                                                            width: 100%;
+                                                                            .--button-submit{
+                                                                                width: 100%;
+                                                                            }
+                                                                            .v-popover{
+                                                                                width: 100%;
+                                                                                .trigger{
+                                                                                    width: 100%;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    &:last-child{
+                                                                        margin-bottom: 0;
+                                                                    }
+                                                                }
+                                                            }
+                                                            .alert{
+                                                                margin: 0 0 0 0;
+                                                                padding: 8px 12px;
+                                                                .alert-heading{
+                                                                    padding: 0;
+                                                                    margin: 0 0 16px 0;
+                                                                    color: $color-text-black;
+                                                                    font-family: $font-sans-bold;
+                                                                    @include fontsize-17();
+                                                                }
+                                                                .alert-main-container{
+                                                                    display: flex;
+                                                                    align-items: flex-start;
+                                                                    .text{
+                                                                        @include fontsize-13();
+                                                                        a{
+                                                                            color: inherit; 
+                                                                        }
+                                                                        >p{
+                                                                            margin-bottom: 4px;
+                                                                            &:last-child{
+                                                                                margin-bottom: 0;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    .icon{
+                                                                        width: 24px;
+                                                                        height: 24px;
+                                                                        display: inline-flex;
+                                                                        align-items: center;
+                                                                        justify-content: center;
+                                                                        margin-top: 0;
+                                                                        img{
+                                                                            max-width: 24px;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            .note-closed-date{
+                                                                padding: 0;
+                                                                margin: 23px 0 0 0;
+                                                                display: flex;
+                                                                width: 100%;
+                                                                align-items: center;
+                                                                justify-content: flex-start;
+                                                                color: $color-special-tab;
+                                                                font-family: $font-sans-default;
+                                                                @include fontsize-14();
+                                                                >span{
+                                                                    padding: 0;
+                                                                    margin: 0;
+                                                                    display: inline-flex;
+                                                                    align-items: center;
+                                                                    justify-content: flex-start;
+                                                                    &.icon{
+                                                                        width: 24px;
+                                                                        height: 24px;
+                                                                        min-width: 24px;
+                                                                        >svg{
+                                                                            display: block;
+                                                                            height: auto;
+                                                                            max-width: 100%;
+                                                                        }
+                                                                        & + .text{
+                                                                            margin-left: 8px;
+                                                                        }
+                                                                    }
+                                                                    &.text{
+                                                                        & + .icon{
+                                                                            margin-left: 8px;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            .note-deadline{
+                                                                padding: 0;
+                                                                margin: 23px 0 0 0;
+                                                                display: flex;
+                                                                width: 100%;
+                                                                align-items: center;
+                                                                justify-content: flex-start;
+                                                                color: $color-special-tab;
+                                                                font-family: $font-sans-default;
+                                                                @include fontsize-14();
+                                                                >span{
+                                                                    padding: 0;
+                                                                    margin: 0;
+                                                                    display: inline-flex;
+                                                                    align-items: center;
+                                                                    justify-content: flex-start;
+                                                                    &.icon{
+                                                                        width: 24px;
+                                                                        height: 24px;
+                                                                        min-width: 24px;
+                                                                        >svg{
+                                                                            display: block;
+                                                                            height: auto;
+                                                                            max-width: 100%;
+                                                                        }
+                                                                        & + .text{
+                                                                            margin-left: 8px;
+                                                                        }
+                                                                    }
+                                                                    &.text{
+                                                                        & + .icon{
+                                                                            margin-left: 8px;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        &:hover{
+                                                            @include box-shadow(0px 6px 18px rgba($color-text-light-grey, 0.15));
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    >ul{
+                                        &.nav-tabs{
+                                            padding: 0;
+                                            margin: 0 0 24px 0;
+                                            list-style:none;
+                                            border-bottom: 1px solid $color-border-main;
+                                            >li{
+                                                &.nav-item{
+                                                    padding: 0 0;
+                                                    margin: 0 0 0 24px;
+                                                    .nav-link{
+                                                        color: $color-text-dark-grey;
+                                                        font-family: $font-sans-default;
+                                                        @include fontsize-15();
+                                                        padding: 10px 0;
+                                                        margin: 0;
+                                                        border:0;
+                                                        background: none;
+                                                        border-bottom: 2px solid transparent;
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        >span{
+                                                            display: inline-flex;
+                                                            align-items: center;
+                                                            justify-content: center;
+                                                            padding: 0;
+                                                            margin: 0;
+                                                            &.text{}
+                                                            &.icon{
+                                                                margin: 0 0 0 8px;
+                                                                >svg{
+                                                                    fill: $color-text-grey;
+                                                                }
+                                                            }
+                                                        }
+                                                        &.active{
+                                                            font-family: $font-sans-bold;
+                                                            color: $color-text-black;
+                                                            border-bottom: 2px solid $color-special-purple;
+                                                        }
+                                                        &.disabled{
+                                                            color: $color-text-grey;
+                                                            cursor: default;
+                                                        }
+                                                    }
+                                                    &:first-child{
+                                                        margin-left: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .heading-container{
+                                    margin-bottom: 20px;
+                                }
+                            }
+                            .tasks-team-mentor-container{
+                                padding: 0;
+                                margin: 0 0 32px 0;
+                                .tasks-team-mentor-info{
+                                    padding: 16px 15px;
+                                    margin: 0;
+                                    background: $color-bg-white;
+                                    @include border-radius(8px);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex-direction: column;
+                                    width: 100%;
+                                    @include media(768) {
+                                        padding: 16px 28px;
+                                        flex-direction: row;
+                                        justify-content: flex-start;
+                                    }
+                                    .teams-mentor-picture{
+                                        display: inline-flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        padding: 0;
+                                        margin: 0 0 14px 0;
+                                        @include media(768) {
+                                            margin: 0 14px 0 0;
+                                        }
+                                        >span{
+                                            padding: 0;
+                                            margin: 0;
+                                            display: inline-flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            &.icon{
+                                                padding: 0;
+                                                margin: 0;
+                                                min-width: 54px;
+                                                width: 54px;
+                                                height: 54px;
+                                                overflow: hidden;
+                                                @include border-radius(100%);
+                                                >img{
+                                                    display: block;
+                                                    height: auto;
+                                                    max-width: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .teams-mentor-data{
+                                        padding: 0;
+                                        margin: 0;
+                                        display: inline-flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-direction: column;
+                                        @include media(768) {
+                                            justify-content: flex-start;
+                                            align-items: flex-start;
+                                            padding-right: 15px;
+                                        }
+                                        >span{
+                                            padding: 0;
+                                            margin: 0;
+                                            display: inline-flex;
+                                            align-items: center;
+                                            justify-content: flex-start;
+                                            &.name{
+                                                padding: 0;
+                                                margin: 0;
+                                                font-family: $font-sans-bold;
+                                                @include fontsize-16();
+                                                color: $color-text-black;
+                                            }
+                                            &.type{
+                                                font-family: $font-sans-default;
+                                                color: $color-special-tab;
+                                                @include fontsize-14();
+                                                margin: 0 0 4px 0;
+                                                padding: 0;
+                                            }
+                                        }
+                                    }
+                                    .teams-mentor-actions{
+                                        padding: 0;
+                                        margin: 14px 0 0 0;
+                                        width: 100%;
+                                        @include media(768) {
+                                            max-width: 290px;
+                                            margin: 0 0 0 auto;
+                                        }
+                                        >ul{
+                                            padding: 0;
+                                            margin: 0;
+                                            list-style:none;
+                                            outline:0;
+                                            width: 100%;
+                                            >li{
+                                                padding: 0;
+                                                margin: 0;
+                                                width: 100%;
+                                                >button{
+                                                    padding: 14px 15px;
+                                                    margin: 0;
+                                                    background: none;
+                                                    outline:0;
+                                                    text-decoration: none;
+                                                    display: inline-flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    background: $color-special-purple;
+                                                    @include border-radius(4px);
+                                                    color: $color-text-white;
+                                                    font-family: $font-sans-bold;
+                                                    @include fontsize-14();
+                                                    width: 100%;
+                                                    >span{
+                                                        padding: 0;
+                                                        margin: 0;
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        &.text{
+
+                                                            & + .icon{
+                                                                margin-left: 6px;
+                                                            }
+                                                        }
+                                                        &.icon{
+                                                            justify-content: center;
+                                                            align-items: center;
+                                                            & + .text{
+                                                                margin-left: 6px;
+                                                            }
+                                                        }
+                                                    }
+                                                    &:hover{
+                                                        background: $color-banner-902;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .tasks-votes-container{
+                                padding: 20px 20px;
+                                margin: 32px 0 52px 0;
+                                background: $color-bg-white;
+                                border: 1px solid $color-special-purple-100;
+                                @include border-radius(4px);
+                                @include media(1200) {
+                                    padding: 32px 32px;
+                                }
+                                .row{
+                                    .col{
+                                        margin-bottom: 20px;
+                                        @include media(992) {
+                                            margin-bottom: 0;
+                                            flex: 1 1 62%;
+                                            max-width: 62%;
+                                        }
+                                        @include media(1400) {
+                                            flex: 1 1 70%;
+                                            max-width: 70%;
+                                        }
+                                        @include media(1920) {
+                                            flex: 1 1 80%;
+                                            max-width: 80%;
+                                        }
+                                        .card{
+                                            padding: 0;
+                                            margin: 0;
+                                            border:0;
+                                            @include border-radius(0);
+                                            background: none;
+                                            .card-body{
+                                                padding: 0 0 0 0;
+                                                margin: 0;
+                                                color: $color-text-dark-grey;
+                                                @include fontsize-15();
+                                                font-family: $font-sans-default;
+                                                display: flex;
+                                                justify-content: center;
+                                                flex-direction: column;
+                                                @include media(992) {
+                                                    padding-right: 15px;
+                                                }
+                                                @include media(1400) {
+                                                    @include fontsize-17();
+                                                }
+                                                .form-main-container{
+                                                    margin: 32px 0 0 0;
+                                                    padding: 0;
+                                                    .form-group{
+                                                        margin-bottom: 0;
+                                                        ul{
+                                                            >li{
+                                                                width: 100%;
+                                                                .--button-submit{
+                                                                    width: 100%;
+                                                                    @include media(992) {
+                                                                        width: auto;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                >p{
+                                                    margin-bottom: 12px;
+                                                    &:last-child{
+                                                        margin-bottom: 0;
+                                                    }
+                                                }
+                                                .card-heading{
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: flex-start;
+                                                    padding: 0;
+                                                    margin: 0 0 18px 0;
+                                                    .text{
+                                                        color: $color-text-black;
+                                                        font-family: $font-sans-bold;
+                                                        @include fontsize-17();
+                                                        @include media(1200) {
+                                                            @include fontsize-20();
+                                                        }
+                                                    }
+                                                    .icon{
+                                                        padding: 0;
+                                                        margin: 0 12px 0 0;
+                                                        width: 24px;
+                                                        height: 24px;
+                                                        max-width: 24px;
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        >img{
+                                                            margin: auto;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.--votes-statistics{
+                                            @include media(992) {
+                                                flex: 1 1 38%;
+                                                max-width: 38%;
+                                            }
+                                            @include media(1400) {
+                                                flex: 1 1 30%;
+                                                max-width: 30%;
+                                            }
+                                            @include media(1920) {
+                                                flex: 1 1 20%;
+                                                max-width: 20%;
+                                            }
+                                            .card{
+                                                .card-body{
+                                                    padding: 32px 16px;
+                                                    @include border-radius(4px);
+                                                    background: $color-bg-blue-grey;
+                                                    margin: 0;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    flex-direction: column;
+                                                    .date-start{
+                                                        padding: 0;
+                                                        margin: 0 0 0 0;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        flex-direction: column;
+                                                        h4{
+                                                            padding: 0;
+                                                            margin: 0 0 12px 0;
+                                                            color: $color-special-tooltip;
+                                                            font-family: $font-sans-bold;
+                                                            @include fontsize-17();
+                                                            @include media(1200) {
+                                                                @include fontsize-20();
+                                                            }
+                                                        }
+                                                        .note{
+                                                            padding: 0;
+                                                            margin: 0 0 12px 0;
+                                                            color: $color-text-dark-grey;
+                                                            @include fontsize-15();
+                                                            font-family: $font-sans-default;
+                                                        }
+                                                        .date{
+                                                            padding: 0;
+                                                            margin: 0;
+                                                            color: $color-text-black;
+                                                            font-family: $font-sans-bold;
+                                                            @include fontsize-20();
+                                                        }
+                                                    }
+                                                    .alert{
+                                                        margin: 0 0 0 0;
+                                                        padding: 8px 12px;
+                                                        .alert-heading{
+                                                            padding: 0;
+                                                            margin: 0 0 16px 0;
+                                                            color: $color-text-black;
+                                                            font-family: $font-sans-bold;
+                                                            @include fontsize-17();
+                                                        }
+                                                        .alert-main-container{
+                                                            display: flex;
+                                                            align-items: center;
+                                                            .text{
+                                                                @include fontsize-13();
+                                                                a{
+                                                                    color: inherit; 
+                                                                }
+                                                            }
+                                                            .icon{
+                                                                width: 24px;
+                                                                height: 24px;
+                                                                display: inline-flex;
+                                                                align-items: center;
+                                                                justify-content: center;
+                                                                margin-top: 0;
+                                                                img{
+                                                                    max-width: 24px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &:first-child{
+                                            position: relative;
+                                            &:before{
+                                                content:none;
+                                                position: absolute;
+                                                width: 1px;
+                                                height: 100%;
+                                                top:0;
+                                                right:15px;
+                                                bottom:0;
+                                                background: $color-special-purple-100;
+                                                @include media(992) {
+                                                    content:'';
+                                                }
+                                            }
+                                        }
+                                        &:last-child{
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            .tasks-info-container{
+                                margin-bottom: 14px;
+                                .row{
+                                    .col{
+                                        margin-bottom: 20px;
+                                        @include media(992) {
+                                            flex: 0 0 50%;
+                                            max-width: 50%;
+                                        }
+                                        @include media(1400) {
+                                            flex: 0 0 60%;
+                                            max-width: 60%;
+                                        }
+                                        @include media(1600) {
+                                            flex: 0 0 65%;
+                                            max-width: 65%;
+                                        }
+                                        @include media(1920) {
+                                            flex: 0 0 71%;
+                                            max-width: 71%;
+                                        }
+                                        .card{
+                                            border:0;
+                                            padding: 24px 24px;
+                                            @include border-radius(4px);
+                                            margin: 0;
+                                            @include box-shadow(none);
+                                            background: $color-bg-white;
+                                            @include media(1200) {
+                                                padding: 32px 24px 32px 32px;
+                                            }
+                                            .card-body{
+                                                padding: 0;
+                                                margin: 0;
+                                                background: none;
+                                                ul{
+                                                    padding: 0;
+                                                    margin: 0;
+                                                    list-style:none;
+                                                    outline:0;
+                                                    @include box-shadow(none);
+                                                    display: flex;
+                                                    align-items: flex-start;
+                                                    justify-content: flex-start;
+                                                    flex-direction: column;
+                                                    >li{
+                                                        padding: 0 0 24px 0;
+                                                        margin: 0 0 24px 0;
+                                                        border-bottom: 1px solid $color-special-purple-100;
+                                                        font-family: $font-sans-default;
+                                                        @include fontsize-15();
+                                                        width: 100%;
+                                                        color: $color-text-dark-grey;
+                                                        @include media(1400) {
+                                                            margin-bottom: 37px;
+                                                            padding-bottom: 37px;
+                                                        }
+                                                        @include media(1600) {
+                                                            margin-bottom: 42px;
+                                                            padding-bottom: 42px;
+                                                        }
+                                                        @include media(1920) {
+                                                            margin-bottom: 48px;
+                                                            padding-bottom: 48px;
+                                                        }
+                                                        h4{
+                                                            font-family: $font-sans-bold;
+                                                            color: $color-text-black;
+                                                            @include fontsize-17();
+                                                            @include media(1200) {
+                                                                @include fontsize-20();
+                                                            }
+                                                        }
+                                                        >p{
+                                                            margin-bottom: 4px;
+                                                            &:last-child{
+                                                                margin-bottom: 0;
+                                                            }
+                                                        }
+                                                        &:last-child{
+                                                            padding-bottom: 0;
+                                                            margin-bottom: 0;
+                                                            border-bottom: 0;
+                                                        }
+                                                    }
+                                                }
+                                                .card-heading{
+                                                    padding: 0;
+                                                    margin: 0 0 24px 0;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: space-between;
+                                                    flex-direction: row;
+                                                    .note{
+                                                        color: $color-text-dark-grey;
+                                                        font-family: $font-sans-default;
+                                                        padding: 0;
+                                                        margin: 12px 0 0 0;
+                                                        @include fontsize-15();
+                                                        >p{
+                                                            margin-bottom: 4px;
+                                                            &:last-child{
+                                                                margin-bottom: 0;
+                                                            }
+                                                        }
+                                                    }
+                                                    .status{
+                                                        display: inline-flex;
+                                                        margin: 0 0 0 auto;
+                                                        padding: 4px 8px;
+                                                        margin: 0;
+                                                        @include border-radius(2px);
+                                                        background: $color-special-purple-100;
+                                                        color: $color-special-purple;
+                                                        font-family: $font-sans-default;
+                                                        @include fontsize-13();
+                                                        &.--button{
+                                                            background: none;
+                                                            padding: 0;
+                                                            width: 40px;
+                                                            @include border-radius(0);
+                                                            @include media(576) {
+                                                                width: auto;
+                                                            }
+                                                            .form-main-container{
+                                                                width: 100%;
+                                                                @include media(576) {
+                                                                    width: auto;
+                                                                }
+                                                                .form-group{
+                                                                    &.--submit{
+                                                                        width: 100%;
+                                                                        ul{
+                                                                            width: 100%;
+                                                                            >li{
+                                                                                width: 100%;
+                                                                                .--button-submit{
+                                                                                    width: 100%;
+                                                                                    @include media(0, 575) {
+                                                                                        min-width: unset;
+                                                                                        padding: 9px 15px;
+                                                                                    }
+                                                                                    >span{
+                                                                                        &.text{
+                                                                                            margin: 0;
+                                                                                            display: none;
+                                                                                            @include media(576) {
+                                                                                                display: inline-flex;
+                                                                                            }
+                                                                                            & + .icon{
+                                                                                                @include media(576) {
+                                                                                                    margin-left: 8px;
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                        &.icon{
+                                                                                            margin: 0;
+                                                                                            & + .text{
+                                                                                                @include media(576) {
+                                                                                                    margin-left: 8px;
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    h3{
+                                                        padding: 0;
+                                                        margin: 0 0 12px 0;
+                                                        color: $color-text-black;
+                                                        font-family: $font-sans-bold;
+                                                        @include fontsize-17();
+                                                        @include media(768) {
+                                                            @include fontsize-20();
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .card-footer{
+                                                background: none;
+                                                padding: 0;
+                                                margin: 0;
+                                                border:0;
+                                            }
+                                        }
+                                        &.--steps-lists{
+                                            @include media(992) {
+                                                flex: 0 0 50%;
+                                                max-width: 50%;
+                                            }
+                                            @include media(1400) {
+                                                flex: 0 0 40%;
+                                                max-width: 40%;
+                                            }
+                                            @include media(1600) {
+                                                flex: 0 0 35%;
+                                                max-width: 35%;
+                                            }
+                                            @include media(1920) {
+                                                flex: 0 0 29%;
+                                                max-width: 29%;
+                                            }
+                                            .card{
+                                                @include media(1200) {
+                                                    padding: 24px 24px;
+                                                }
+                                                .card-body{
+                                                    .card-illustration{
+                                                        padding: 0;
+                                                        margin: 0;
+                                                        text-align: center;
+                                                        .card-illustration-tracks{
+                                                            padding: 0;
+                                                            margin: 0 0 -22px 0;
+                                                            position: relative;
+                                                            z-index: 1;
+                                                            @include media(576) {
+                                                                margin-bottom: -32px;
+                                                            }
+                                                            ul{
+                                                                padding: 0;
+                                                                margin: 0 -7px;
+                                                                display: flex;
+                                                                align-items: center;
+                                                                justify-content: center;
+                                                                flex-direction: row;
+                                                                flex-wrap: nowrap;
+                                                                >li{
+                                                                    flex: 1 1 33.333333%;
+                                                                    max-width: 33.333333%;
+                                                                    padding: 0 7px;
+                                                                    margin: 0;
+                                                                    display: inline-flex;
+                                                                    justify-content: center;
+                                                                    align-items: center;
+                                                                    @include fontsize-13();
+                                                                    font-family: $font-sans-bold;
+                                                                    text-align:center;
+                                                                    border:0;
+                                                                    @include media(992) {
+                                                                        @include fontsize-11();
+                                                                    }
+                                                                    @include media(1200) {
+                                                                        @include fontsize-13();
+                                                                    }
+                                                                    >span{
+                                                                        display: inline-flex;
+                                                                        padding: 4px 10px;
+                                                                        margin: 0;
+                                                                        @include border-radius-separate(4px, 4px, 4px, 4px);
+                                                                        @include media(576) {
+                                                                            padding: 8px 8px;
+                                                                        }
+                                                                        @include media(992) {
+                                                                            padding: 4px 10px;
+                                                                        }
+                                                                        @include media(1200) {
+                                                                            padding: 4px 10px;
+                                                                        }
+                                                                    }
+                                                                    &:nth-child(1){
+                                                                        >span{
+                                                                            background:$color-tracks-100;
+                                                                            color: $color-tracks-200;
+                                                                        }
+                                                                    }
+                                                                    &:nth-child(2){
+                                                                        >span{
+                                                                            background:$color-tracks-300;
+                                                                            color: $color-tracks-400;
+                                                                        }
+                                                                    }
+                                                                    &:nth-child(3){
+                                                                        >span{
+                                                                            background:$color-tracks-500;
+                                                                            color: $color-tracks-600;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(-n+2){
+                                            @include media(992) {
+                                                margin-bottom: 0;
+                                            }
+                                        }
+                                        &:last-child{
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

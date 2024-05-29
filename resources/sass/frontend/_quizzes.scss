@@ -1,0 +1,1096 @@
+main{
+    &.main{
+        .main-body-container{
+            .main-page-container{
+                &.--page-quizzes{
+                    .page-body{
+                        .tasks-quizzes-main-container{
+                            padding: 0;
+                            margin: 0 0;
+                            .quizzes-main-questions-container{
+                                padding: 0;
+                                margin: 0;
+                                .quizzes-answers-container{
+                                    padding: 0;
+                                    margin: 26px 0 0 0;
+                                    >ul{
+                                        padding: 0;
+                                        margin: 0;
+                                        display: flex;
+                                        align-items: flex-start;
+                                        justify-content: flex-start;
+                                        flex-direction: column;
+                                        list-style:none;
+                                        @include box-shadow(none);
+                                        width: 100%;
+                                        >li{
+                                            padding: 0;
+                                            margin: 12px 0 0 0;
+                                            width: 100%;
+                                            >input{
+                                                padding: 0;
+                                                margin: 0;
+                                                border:0;
+                                                width: 0;
+                                                height: 0;
+                                                overflow: hidden;
+                                                display: none;
+                                                & + label{
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: flex-start;
+                                                    padding: 12px 32px;
+                                                    margin: 0;
+                                                    border:0;
+                                                    @include box-shadow(none);
+                                                    outline:0;
+                                                    cursor: pointer;
+                                                    background: $color-bg-white;
+                                                    @include border-radius(4px);
+                                                    border:1px solid $color-border-main;
+                                                    width: 100%;
+                                                    color: $color-text-black;
+                                                    @include fontsize-15();
+                                                    font-family: $font-sans-default;
+                                                    @include border-radius(4px);
+                                                    @include media(576) {
+                                                        @include fontsize-17();
+                                                    }
+                                                    >span{
+                                                        padding: 0;
+                                                        margin: 0;
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        justify-content: flex-start;
+                                                        &.letter{
+                                                            margin: 0 12px 0 0;
+                                                            font-family: $font-sans-bold;
+                                                        }
+                                                        &.text{}
+                                                        &.icon{
+                                                            margin: 0 0 0 auto;
+                                                        }
+                                                    }
+                                                    &:hover{
+                                                        border-color: $color-border-active;
+                                                    }
+                                                    &:focus{
+                                                        background: $color-bg-white;
+                                                        border-color: $color-border-main;
+                                                    }
+                                                    &.--success{
+                                                        background: $color-state-success-light;
+                                                        border-color: $color-state-success;
+                                                    }
+                                                    &.--danger{
+                                                        background: $color-state-error-light;
+                                                        border-color: $color-state-error;
+                                                    }
+                                                    &.--disabled{
+                                                        cursor: default;
+                                                        background: $color-bg-white;
+                                                        border-color: $color-border-main;
+                                                        &:hover{
+                                                            background: $color-bg-white;
+                                                            border-color: $color-border-main;
+                                                        }
+                                                        &.--success{
+                                                            background: $color-state-success-light;
+                                                            border-color: $color-state-success;
+                                                        }
+                                                        &.--danger{
+                                                            background: $color-state-error-light;
+                                                            border-color: $color-state-error;
+                                                        }
+                                                    }
+                                                }
+                                                &:checked{
+                                                    & + label{
+                                                        border-color: $color-border-active;
+                                                        background: rgba($color-text-black, 0.06);
+                                                        &:focus{
+                                                            border-color: $color-border-active;
+                                                            background: rgba($color-text-black, 0.06);
+                                                        }
+                                                        &.--success{
+                                                            background: $color-state-success-light;
+                                                            border-color: $color-state-success;
+                                                        }
+                                                        &.--danger{
+                                                            background: $color-state-error-light;
+                                                            border-color: $color-state-error;
+                                                        }
+                                                        &.--disabled{
+                                                            cursor: default;
+                                                            background: $color-bg-white;
+                                                            border-color: $color-border-main;
+                                                            &.--success{
+                                                                background: $color-state-success-light;
+                                                                border-color: $color-state-success;
+                                                            }
+                                                            &.--danger{
+                                                                background: $color-state-error-light;
+                                                                border-color: $color-state-error;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            &:first-child{
+                                                margin-top: 9px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .quizzes-questions-container{
+                                    padding: 15px 15px;
+                                    margin: 26px 0 0 0;
+                                    background: $color-bg-white;
+                                    @include border-radius(4px);
+                                    color: $color-text-dark-grey;
+                                    @include fontsize-17();
+                                    font-family: $font-sans-bold;
+                                    @include box-shadow(0px 6px 18px rgba($color-text-dark, 0.08));
+                                    position: relative;
+                                    user-select: none;
+                                    @include media(576) {
+                                        padding: 20px 32px;
+                                    }
+                                    @include media(768) {
+                                        @include fontsize-20();
+                                    }
+                                    @include media(1400) {
+                                        padding: 32px 80px;
+                                    }
+                                    &:before{
+                                        content: none;
+                                        position: absolute;
+                                        top:0;
+                                        bottom:0;
+                                        margin: auto;
+                                        left: -25px;
+                                        width: 70px;
+                                        height: 16px;
+                                        background: url('../images/arrow.svg') center center no-repeat;
+                                        z-index:-1;
+                                        @include media(992) {
+                                            content:'';
+                                        }
+                                        @include media(1200) {
+                                            left: -35px;
+                                        }
+                                        @include media(1400) {
+                                            left: -28px;
+                                        }
+                                        @include media(1600) {
+                                            left: -35px;
+                                        }
+                                    }
+                                }
+                                .quizzes-timer-container{
+                                    padding: 0;
+                                    margin: 0;
+                                    .timer-progress-bar{
+                                        padding: 0;
+                                        margin: 0;
+                                        .progress-bar-main-container{
+                                            .progress{
+                                                height: 8px;
+                                                background: $color-divider;
+                                                .progress-bar{
+                                                    background: $color-special-purple;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .timer-named{
+                                        padding: 0;
+                                        margin: 0 0 12px 0;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        flex-direction: column;
+                                        @include media(576) {
+                                            flex-direction: row;
+                                        }
+                                        .time{
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: flex-end;
+                                            padding: 0;
+                                            margin: 0 auto;
+                                            @include media(576) {
+                                                margin: 0 0 0 auto;
+                                            }
+                                            >span{
+                                                display: inline-flex;
+                                                align-items: center;
+                                                justify-content: flex-end;
+                                                color: $color-text-black;
+                                                @include fontsize-15();
+                                                font-family: $font-sans-bold;
+                                                @include media(576) {
+                                                    @include fontsize-17();
+                                                }
+                                                @include media(1200) {
+                                                    @include fontsize-20();
+                                                }
+                                                &.text{}
+                                                &.seconds{
+                                                    padding: 0;
+                                                    margin: 0 0 0 4px;
+                                                    color: $color-special-purple;
+                                                }
+                                            }
+                                        }
+                                        .info{
+                                            padding: 0;
+                                            margin: 0 0 8px 0;
+                                            min-width: 95px;
+                                            text-align: center;
+                                            @include media(576) {
+                                                text-align: left;
+                                                margin-bottom: 0;
+                                            }
+                                            >span{
+                                                display: inline-flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                padding: 0;
+                                                margin: 0;
+                                                color: $color-text-grey;
+                                                @include fontsize-15();
+                                                font-family: $font-sans-bold;
+                                                @include media(576) {
+                                                    @include fontsize-17();
+                                                }
+                                                @include media(1200) {
+                                                    @include fontsize-20();
+                                                }
+                                                &.question-current{
+                                                    color: $color-text-black;
+                                                }
+                                                &.question-divider{}
+                                                &.question-counts{}
+                                            }
+                                        }
+                                    }
+                                    &.--mobile-scrollspy{
+                                        position: sticky;
+                                        top:0;
+                                        left:0;
+                                        z-index: 99;
+                                        @include media(576) {
+                                            position: relative;
+                                        }
+                                        &.--has-scroll{
+                                            background: $color-bg-white;
+                                            margin: 0 -15px;
+                                            padding: 15px 15px;
+                                            @include box-shadow(0px 6px 18px rgba($color-text-dark, 0.08));
+                                            .timer-named{
+                                                flex-direction: row;
+                                                justify-content: center;
+                                                margin-bottom: 0;
+                                                .time{
+                                                    >span{
+                                                        @include fontsize-13();
+                                                    }
+                                                }
+                                                .info{
+                                                    margin-bottom: 0;
+                                                    text-align: left;
+                                                    >span{
+                                                        @include fontsize-13();
+                                                    }
+                                                }
+                                            }
+                                            .timer-progress-bar{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                                .quizzes-next-container{
+                                    padding: 0;
+                                    margin: 20px 0 0 0;
+                                    .form-main-container{
+                                        width: 100%;
+                                        .form-group{
+                                            width: 100%;
+                                            >ul{
+                                                width: 100%;
+                                                >li{
+                                                    width: 100%;
+                                                    display: inline-flex;
+                                                    align-items: center;
+                                                    justify-content: flex-end;
+                                                    .--button-submit{
+                                                        width: 100%;
+                                                        @include media(768) {
+                                                            width: auto;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .quizzes-opponents-container{
+                                    padding: 0;
+                                    margin: 20px 0 0 0;
+                                    .row{
+                                        .col{
+                                            .card{
+                                                padding: 0;
+                                                margin: 0;
+                                                border:0;
+                                                background: none;
+                                                @include box-shadow(none);
+                                                .card-body{
+                                                    padding: 0;
+                                                    margin: 0;
+                                                    .quizzes-opponents-user-container{
+                                                        padding: 15px 15px;
+                                                        height: 100%;
+                                                        border:1px solid transparent;
+                                                        @include border-radius(4px);
+                                                        background: $color-bg-white;
+                                                        background-clip: padding-box;
+                                                        position: relative;
+                                                        &:before {
+                                                            content: '';
+                                                            position: absolute;
+                                                            top: 0;
+                                                            right: 0;
+                                                            bottom: 0;
+                                                            left: 0;
+                                                            z-index: -1;
+                                                            margin: -2px;
+                                                            border-radius: inherit;
+                                                            background: linear-gradient(90deg, #776FEF 0%, #D7699B 50.31%, #FFC141 100%);
+                                                        }
+                                                        .opponents-mobile-container,
+                                                        .user-mobile-container{
+                                                            padding: 0;
+                                                            margin: 0;
+                                                            height: 100%;
+                                                            width: 100%;
+                                                            @include fontsize-12();
+                                                            font-family: $font-sans-default;
+                                                            color: $color-text-dark-grey;
+                                                            display: flex;
+                                                            align-items: center;
+                                                            justify-content: center;
+                                                            flex-direction: column;
+                                                            text-align:center;
+                                                            .user-position{
+                                                                padding: 0;
+                                                                margin: 0 0 36px 0;
+                                                                @include fontsize-12();
+                                                                >strong{
+                                                                    font-family: $font-sans-bold;
+                                                                    @include fontsize-12();
+                                                                }
+                                                            }
+                                                            .user-full_name{
+                                                                padding: 0;
+                                                                margin: auto 0 0 0;
+                                                                @include fontsize-14();
+                                                                >strong{
+                                                                    font-family: $font-sans-bold;
+                                                                    @include fontsize-14();
+                                                                }
+                                                            }
+                                                            .user-picture{
+                                                                padding: 0;
+                                                                margin: 0 0 12px 0;
+                                                                min-width: 48px;
+                                                                max-width: 48px;
+                                                                overflow: hidden;
+                                                                @include border-radius(100%);
+                                                                >img{
+                                                                    @include border-radius(100%);
+                                                                }
+                                                            }
+                                                        }
+                                                        .opponents-desktop-container,
+                                                        .user-desktop-container{
+                                                            padding: 0;
+                                                            margin: 0;
+                                                            display: flex;
+                                                            align-items: flex-start;
+                                                            justify-content: flex-start;
+                                                            flex-direction: row;
+                                                            .user-picture{
+                                                                min-width: 48px;
+                                                                width: 48px;
+                                                                height: 48px;
+                                                                @include border-radius(100%);
+                                                                overflow: hidden;
+                                                                >img{
+                                                                    display: block;
+                                                                    height: auto;
+                                                                    max-width: 100%;
+                                                                }
+                                                                & + .user-data{
+                                                                    margin-left: 16px;
+                                                                }
+                                                            }
+                                                            .user-data{
+                                                                padding: 0;
+                                                                margin: 0;
+                                                                width: 100%;
+                                                                .user-organization{
+                                                                    padding: 0;
+                                                                    margin: 0;
+                                                                    color: $color-text-grey;
+                                                                    @include fontsize-13();
+                                                                    font-family: $font-sans-default;
+                                                                }
+                                                                .user-full_name{
+                                                                    padding: 0;
+                                                                    margin: 0 0 6px 0;
+                                                                    color: $color-special-tab;
+                                                                    @include fontsize-14();
+                                                                    font-family: $font-sans-default;
+                                                                }
+                                                                .user-data-h{
+                                                                    padding: 0;
+                                                                    margin: 0 0 4px 0;
+                                                                    display: flex;
+                                                                    align-items: center;
+                                                                    justify-content: flex-start;
+                                                                    >span{
+                                                                        padding: 0;
+                                                                        margin: 0;
+                                                                        display: inline-flex;
+                                                                        align-items: center;
+                                                                        justify-content: center;
+                                                                        &.user-data-h-name{
+                                                                            color: $color-special-tab;
+                                                                            @include fontsize-12();
+                                                                            font-family: $font-sans-bold;
+                                                                        }
+                                                                        &.user-data-h-progress{
+                                                                            justify-content: flex-end;
+                                                                            margin-left: auto;
+                                                                            color: $color-special-tab;
+                                                                            @include fontsize-12();
+                                                                            font-family: $font-sans-bold;
+                                                                            @include media(992) {
+                                                                                display: none;
+                                                                            }
+                                                                            @include media(1200) {
+                                                                                display: inline-flex;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                & + .user-picture{
+                                                                    margin-left: 16px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .quizzes-opponents-vs-container{
+                                                        padding: 15px 0;
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        >span{
+                                                            display: inline-flex;
+                                                            padding: 0;
+                                                            margin: 0;
+                                                            align-items: center;
+                                                            justify-content: center;
+                                                            font-family: $font-sans-bold;
+                                                            @include fontsize-32();
+                                                            color: $color-text-grey;
+                                                            @include media(1200) {
+                                                                @include fontsize-42();
+                                                            }
+                                                            
+                                                            &.--divider{
+                                                                margin: 0 2px;
+                                                                position: relative;
+                                                                min-width: 4px;
+                                                                @include media(768) {
+                                                                    margin: 0 18px;
+                                                                }
+                                                            }
+                                                            &.--user,
+                                                            &.--opponent{
+                                                                min-width: 30px;
+                                                                &.--success{
+                                                                    color: $color-state-success;
+                                                                }
+                                                                &.--danger{
+                                                                    color: $color-state-error;
+                                                                }
+                                                            }
+                                                        }
+                                                        &.--hidden{
+                                                            @include opacity(0);
+                                                        }
+                                                        &.--is-show{
+                                                            @include opacity(1);
+                                                        }
+                                                    }
+                                                }
+                                                &.--opponent{
+                                                    .card-body{
+                                                        .quizzes-opponents-user-container{
+                                                            @include box-shadow(0px 0px 0.8px 0px rgba(0, 0, 0, 0.06), 0px 0px 2px 0px rgba(0, 0, 0, 0.04), 0px 0px 5px 0px rgba(0, 0, 0, 0.04), 0px 0px 17px 0px rgba(0, 0, 0, 0.03));
+                                                            &:before{
+                                                                content: none;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            &.--quizzes-opponents-user{
+                                                // flex: 0 0 33.3333333333%;
+                                                // max-width: 33.3333333333%;
+                                                flex: 0 0 41%;
+                                                max-width: 41%;
+                                            }
+                                            &.--quizzes-opponents-vs{
+                                                padding: 0;
+                                                // flex: 0 0 33.3333333333%;
+                                                // max-width: 33.3333333333%;
+                                                flex: 0 0 18%;
+                                                max-width: 18%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .quizzes-main-robot-container{
+                                padding: 0;
+                                margin: 0 0 56px 0;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                >span{
+                                    display: inline-flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    padding: 0;
+                                    margin: 0;
+                                    &.icon{
+                                        >img{
+                                            margin: 0 auto;
+                                        }
+                                    }
+                                }
+                            }
+                            .quizzes-instructions-main-container{
+                                padding: 15px 15px 32px 15px;
+                                margin: 0;
+                                background: $color-bg-white;
+                                @include border-radius(4px);
+                                .instructions-actions{
+                                    padding: 0;
+                                    margin: 32px 0 0 0;
+                                    @include media(768) {
+                                        margin-left: 24px;
+                                    }
+                                    .form-main-container{
+                                        .form-group{
+                                            padding: 0;
+                                            margin: 0;
+                                            &.--submit{
+                                                >ul{
+                                                    flex-direction: column;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    @include media(768) {
+                                                        flex-direction: row;
+                                                        justify-content: flex-start;
+                                                    }
+                                                    >li{
+                                                        padding: 0;
+                                                        margin: 24px 0 0 0;
+                                                        width: 100%;
+                                                        @include media(768) {
+                                                            width: auto;
+                                                            margin: 0 0 0 24px;
+                                                        }
+                                                        .--button-submit{
+                                                            min-width: 180px;
+                                                            width: 100%;
+                                                            @include media(768) {
+                                                                width: auto;
+                                                            }
+                                                        }
+                                                        &:first-child{
+                                                            margin-top: 0;
+                                                            @include media(768) {
+                                                                margin-left: 0;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .instructions-body{
+                                    padding: 16px 32px;
+                                    margin: 0;
+                                    background: $color-bg-blue-grey;
+                                    @include border-radius(4px);
+                                    @include fontsize-15();
+                                    @include media(768) {
+                                        @include fontsize-17();
+                                    }
+                                    @include media(992) {
+                                        padding: 32px 32px 32px 48px;
+                                    }
+                                    .text{
+                                        >ul{
+                                            padding: 0;
+                                            margin: 0;
+                                            list-style-position: inside;
+                                            list-style-type: disc;
+                                            border:0;
+                                            >li{
+                                                color: $color-text-dark-grey;
+                                                @include fontsize-15();
+                                                font-family: $font-sans-default;
+                                                padding: 0;
+                                                margin: 0 0 8px 0;
+                                                &:last-child{
+                                                    margin-bottom: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .icon{
+                                        padding: 0;
+                                        margin: 0 0 16px -15px;
+                                        >img{}
+                                    }
+                                }
+                                .instructions-heading{
+                                    padding: 0;
+                                    margin: 0 0 16px 0;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    @include media(576) {
+                                        padding: 0 0 0 24px;
+                                    }
+                                    >h3{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        padding: 0;
+                                        margin: 0;
+                                        color:$color-text-black;
+                                        @include fontsize-20();
+                                        font-family: $font-sans-bold;
+                                        @include media(768) {
+                                            @include fontsize-24();
+                                        }
+                                        @include media(992) {
+                                            @include fontsize-28();
+                                        }
+                                        >span{
+                                            display: inline-flex;
+                                            align-items: center;
+                                            justify-content: flex-start;
+                                            padding: 0;
+                                            margin: 0;
+                                            &.text{
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .quizzes-show-tabs-warning-main-container{
+                                padding: 24px 15px 32px 15px;
+                                margin: 0;
+                                background: $color-bg-white;
+                                @include border-radius(4px);
+                                .quizzes-show-tabs-warning-body{
+                                    text-align: center;
+                                    font-family: $font-sans-default;
+                                    color: $color-text-black;
+                                    @include fontsize-15();
+                                    @include media(576) {
+                                        @include fontsize-17();
+                                    }
+                                    @include media(1200) {
+                                        @include fontsize-20();
+                                    }
+                                    strong{
+                                        font-family: $font-sans-bold;
+                                    }
+                                    >p{
+                                        margin-bottom: 6px;
+                                    }
+                                }
+                                .quizzes-show-tabs-warning-actions{
+                                    padding: 0;
+                                    margin: 44px 0 0 0;
+                                    @include media(1200) {
+                                        padding: 0 30px;
+                                    }
+                                    .form-main-container{
+                                        .form-group{
+                                            width: 100%;
+                                            @include media(768) {
+                                                width: auto;
+                                            }
+                                            >ul{
+                                                width: 100%;
+                                                >li{
+                                                    width: 100%;
+                                                    text-align:center;
+                                                    .--button-submit{
+                                                        width: 100%;
+                                                        @include media(768) {
+                                                            width: auto;
+                                                            min-width: 185px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .quizzes-show-results-main-container{
+                                padding: 24px 15px 32px 15px;
+                                margin: 0;
+                                background: $color-bg-white;
+                                @include border-radius(4px);
+                                .quizzes-show-results-illustration{
+                                    padding: 0;
+                                    margin: 40px auto 0 auto;
+                                    text-align: center;
+                                    max-width: 512px;
+                                    >img{
+                                        margin: 0 auto;
+                                    }
+                                }
+                                .quizzes-show-results-lists-container{
+                                    padding: 0;
+                                    margin: 40px 0 0 0;
+                                    @include media(992) {
+                                        padding: 0 50px;
+                                    }
+                                    >ul{
+                                        padding: 0;
+                                        margin: 0;
+                                        list-style:none;
+                                        outline:0;
+                                        border:0;
+                                        @include box-shadow(none);
+                                        >li{
+                                            padding: 0;
+                                            margin: 60px 0 0 0;
+                                            .questions-container{
+                                                padding: 0;
+                                                margin: 0;
+                                                .question{
+                                                    padding: 15px 15px;
+                                                    margin: 0 0 20px 0;
+                                                    display: flex;
+                                                    align-items: flex-start;
+                                                    justify-content: flex-start;
+                                                    font-family: $font-sans-bold;
+                                                    color: $color-text-dark-grey;
+                                                    @include fontsize-17();
+                                                    @include media(992) {
+                                                        @include fontsize-20();
+                                                        padding: 24px 16px 24px 42px;
+                                                    }
+                                                    >span{
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        justify-content: flex-start;
+                                                        padding: 0;
+                                                        margin: 0;
+                                                        &.number{
+                                                            padding: 0;
+                                                            margin: 0 10px 0 0;
+                                                        }
+                                                        &.text{}
+                                                    }
+                                                }
+                                                .answers{
+                                                    padding: 0 15px;
+                                                    margin: 0;
+                                                    @include media(576) {
+                                                        padding: 0 30px;
+                                                    }
+                                                    @include media(1200) {
+                                                        padding: 0 45px;
+                                                    }
+                                                    >ul{
+                                                        padding: 0;
+                                                        margin: 0;
+                                                        list-style:none;
+                                                        outline:0;
+                                                        border:0;
+                                                        @include box-shadow(none);
+                                                        >li{
+                                                            margin: 12px 0 0 0;
+                                                            display: flex;
+                                                            align-items: center;
+                                                            justify-content: flex-start;
+                                                            padding: 12px 32px;
+                                                            border:0;
+                                                            @include box-shadow(none);
+                                                            outline:0;
+                                                            background: $color-bg-white;
+                                                            @include border-radius(4px);
+                                                            border:1px solid $color-border-main;
+                                                            width: 100%;
+                                                            color: $color-text-black;
+                                                            @include fontsize-15();
+                                                            font-family: $font-sans-default;
+                                                            @include border-radius(4px);
+                                                            @include media(992) {
+                                                                @include fontsize-17();
+                                                            }
+                                                            >span{
+                                                                padding: 0;
+                                                                margin: 0;
+                                                                display: inline-flex;
+                                                                align-items: center;
+                                                                justify-content: flex-start;
+                                                                &.letter{
+                                                                    margin: 0 12px 0 0;
+                                                                    min-width: 15px;
+                                                                    font-family: $font-sans-bold;
+                                                                }
+                                                                &.text{
+                                                                    padding: 0 15px 0 0;
+                                                                    margin: 0;
+                                                                }
+                                                                &.icon{
+                                                                    margin: 0 0 0 auto;
+                                                                    min-width: 18px;
+                                                                }
+                                                            }
+                                                            &.--success{
+                                                                background: $color-state-success-light;
+                                                                border-color: $color-state-success;
+                                                            }
+                                                            &.--choice-danger{
+                                                                background: $color-state-error-light;
+                                                                border-color: $color-state-error;
+                                                            }
+                                                            &.--danger{
+                                                                background: $color-state-error-light;
+                                                                border-color: $color-state-error;
+                                                            }
+                                                            &:first-child{
+                                                                margin-top: 0;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            &:first-child{
+                                                margin-top: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                                .quizzes-show-results-container{
+                                    padding: 15px 15px;
+                                    margin: 40px 0 0 0;
+                                    background: $color-bg-blue-grey;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex-direction: column;
+                                    @include media(768) {
+                                        flex-direction: row;
+                                        justify-content: flex-start;
+                                    }
+                                    @include media(992) {
+                                        padding: 16px 32px;
+                                    }
+                                    .results-actions{
+                                        padding: 0;
+                                        margin: 24px 0 0 0;
+                                        width: 100%;
+                                        @include media(768) {
+                                            width: auto;
+                                            margin: 0 0 0 24px;
+                                        }
+                                        .form-main-container{
+                                            .form-group{
+                                                width: 100%;
+                                                @include media(768) {
+                                                    width: auto;
+                                                }
+                                                >ul{
+                                                    width: 100%;
+                                                    @include media(768) {
+                                                        width: auto;
+                                                    }
+                                                    >li{
+                                                        width: 100%;
+                                                        @include media(768) {
+                                                            width: auto;
+                                                        }
+                                                        .--button-submit{
+                                                            width: 100%;
+                                                            @include media(768) {
+                                                                width: auto;
+                                                                min-width: 185px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .results-info{
+                                        padding: 0;
+                                        margin: 0;
+                                        color: $color-text-dark-grey;
+                                        @include fontsize-15();
+                                        font-family: $font-sans-default;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        @include media(768) {
+                                            @include fontsize-17();
+                                        }
+                                        >span{
+                                            font-family: $font-sans-bold;
+                                            @include fontsize-28();
+                                            margin-left: 14px;
+                                            >span{
+                                                &.--success{
+                                                    color: $color-state-success;
+                                                }
+                                                &.--danger{
+                                                    color: $color-state-error;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .quizzes-show-results-note{
+                                    padding: 32px 0;
+                                    margin: 0 15px;
+                                    border-bottom: 1px solid $color-special-purple-100;
+                                    color: $color-text-dark-grey;
+                                    @include fontsize-16();
+                                    font-family: $font-sans-default;
+                                    @include media(992) {
+                                        margin: 0 32px;
+                                        @include fontsize-18();
+                                    }
+                                    strong{
+                                        font-family: $font-sans-bold;
+                                        color: $color-special-tab;
+                                    }
+                                    >p{
+                                        margin-bottom: 2px;
+                                        &:last-child{
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                                .quizzes-show-results-actions{
+                                    padding: 0;
+                                    margin: 24px 0 0 0;
+                                    @include media(1200) {
+                                        padding: 0 30px;
+                                    }
+                                    .form-main-container{
+                                        .form-group{
+                                            width: 100%;
+                                            @include media(768) {
+                                                width: auto;
+                                            }
+                                            >ul{
+                                                width: 100%;
+                                                @include media(768) {
+                                                    width: auto;
+                                                }
+                                                >li{
+                                                    width: 100%;
+                                                    @include media(768) {
+                                                        width: auto;
+                                                    }
+                                                    .--button-submit{
+                                                        width: 100%;
+                                                        @include media(768) {
+                                                            width: auto;
+                                                            min-width: 185px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .quizzes-show-results-body{
+                                    text-align: center;
+                                    font-family: $font-sans-default;
+                                    color: $color-text-black;
+                                    @include fontsize-15();
+                                    @include media(576) {
+                                        @include fontsize-17();
+                                    }
+                                    @include media(1200) {
+                                        @include fontsize-20();
+                                    }
+                                    strong{
+                                        font-family: $font-sans-bold;
+                                    }
+                                    >p{
+                                        margin-bottom: 6px;
+                                    }
+                                }
+                            }
+                        }
+                        .banner-main-container{
+                            min-height: 174px;
+                            &:before{
+                                content: none;
+                                @include media(992) {
+                                    content: none;
+                                }
+                            }
+                            .banner-heading-container{
+                                .label{
+                                    @include media(576) {
+                                        @include fontsize-17();
+                                    }
+                                    @include media(768) {
+                                        @include fontsize-20();
+                                    }
+                                }
+                                h3{
+                                    @include media(576) {
+                                        @include fontsize-28();
+                                    }
+                                    @include media(768) {
+                                        @include fontsize-32();
+                                    }
+                                    @include media(992) {
+                                        @include fontsize-42();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

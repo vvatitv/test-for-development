@@ -1,0 +1,33 @@
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+	wxga: 1600px,
+	fhd: 1920px,
+	// qhd: 2560px,
+	// uhd: 3840px,
+	// 4k: 4096px
+);
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+	xxl: 1320px,
+	wxga: 1530px,
+	fhd: 1830px,
+	// qhd: 2470px,
+	// uhd: 3810px,
+	// 4k: 4006px
+);
+
+$enable-rounded: false;
+
+
+// Then include the following
+@import '~bootstrap/scss/bootstrap.scss';
+// @import '~bootstrap-vue/src/index.scss';

@@ -1,0 +1,116 @@
+.heading-container{
+    padding: 0;
+    margin: 0 0 28px 0;
+    .note{
+        padding: 0;
+        margin: 12px 0 0 0;
+        color: $color-text-dark-grey;
+        font-family: $font-sans-default;
+        @include fontsize-15();
+    }
+    h1{
+        padding: 0;
+        margin: 0;
+        @include fontsize-20();
+        font-family: $font-sans-bold;
+        color: $color-text-dark;
+        @include media(768) {
+            @include fontsize-24();
+        }
+        @include media(992) {
+            @include fontsize-28();
+        }
+        @include media(1200) {
+            @include fontsize-32();
+        }
+        @include media(1400) {
+            @include fontsize-42();
+        }
+        >span{
+            color: $color-text-grey;
+            font-family: $font-sans-default;
+        }
+    }
+    h2{
+        padding: 0;
+        margin: 0;
+        @include fontsize-20();
+        font-family: $font-sans-bold;
+        color: $color-text-dark;
+        @include media(768) {
+            @include fontsize-24();
+        }
+        @include media(992) {
+            @include fontsize-28();
+        }
+        @include media(1200) {
+            @include fontsize-32();
+        }
+        >span{
+            color: $color-text-grey;
+            font-family: $font-sans-default;
+        }
+    }
+    h3{
+        padding: 0;
+        margin: 0;
+        @include fontsize-20();
+        font-family: $font-sans-bold;
+        color: $color-text-dark;
+        @include media(992) {
+            @include fontsize-24();
+        }
+        @include media(1200) {
+            @include fontsize-28();
+        }
+        >span{
+            color: $color-text-grey;
+            font-family: $font-sans-default;
+        }
+    }
+    h4{
+        padding: 0;
+        margin: 0;
+        @include fontsize-15();
+        font-family: $font-sans-bold;
+        color: $color-text-dark;
+        @include media(992) {
+            @include fontsize-17();
+        }
+        @include media(1200) {
+            @include fontsize-20();
+        }
+        >span{
+            color: $color-text-grey;
+            font-family: $font-sans-default;
+        }
+    }
+    h5{
+        padding: 0;
+        margin: 0;
+        @include fontsize-15();
+        font-family: $font-sans-bold;
+        color: $color-text-dark;
+        @include media(992) {
+            @include fontsize-17();
+        }
+        >span{
+            color: $color-text-grey;
+            font-family: $font-sans-default;
+        }
+    }
+    h6{
+        padding: 0;
+        margin: 0;
+        @include fontsize-11();
+        font-family: $font-sans-bold;
+        color: $color-text-dark;
+        @include media(768) {
+            @include fontsize-15();
+        }
+        >span{
+            color: $color-text-grey;
+            font-family: $font-sans-default;
+        }
+    }
+}

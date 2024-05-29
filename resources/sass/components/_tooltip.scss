@@ -1,0 +1,147 @@
+.v-popover{
+    .trigger{
+        .tooltip-icon{
+            >button{
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                margin: 0;
+                background: none;
+                
+                >span{
+                    padding: 0;
+                    margin: 0;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    &.icon{
+                        width: 20px;
+                        height: 20px;
+                        min-width: 20px;
+                        >svg{
+                            display: block;
+                            height: auto;
+                            max-width: 100%;
+                        }
+                        & + .text{
+                            margin-left: 8px;
+                        }
+                    }
+                    &.text{
+                        & + .icon{
+                            margin-left: 8px;
+                        }
+                    }
+                }
+                &.tooltip-button-info{
+                    @include border-radius-separate(100%, 100%, 100%, 100%);
+                    border:0;
+                }
+            }
+        }
+    }
+}
+.tooltip{
+    z-index:30;
+    &.popover{
+        border:0;
+        .tooltip-inner{
+            &.popover-inner{
+                @include border-radius(4px);
+                @include box-shadow(none);
+                background: $color-special-tooltip;
+                color:$color-text-white;
+                min-width: 218px;
+                font-family: $font-sans-default;
+                font-size:rem(12px);
+                line-height: 16px;
+                text-align: left;
+                padding: 5px 8px;
+                .tooltip-description{
+                    p{
+                        color:$color-text-white;
+                        margin: 0 0 12px 0;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                    a{
+                        text-decoration: underline;
+                        color:$color-text-white;
+                        &:hover{
+                            text-decoration: none;
+                        }
+                        &.--link-icon-file-attach{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            text-decoration: none;
+                            >span{
+                                display: inline-flex;
+                                align-items: center;
+                                padding: 0;
+                                margin: 0;
+                                justify-content: flex-start;
+                                &.icon{
+                                    width: 32px;
+                                    height: 32px;
+                                    margin: 0 6px 0 0;
+                                    justify-content: center;
+                                    >svg{
+                                        fill: $color-bg-white;
+                                        max-width: 100%;
+                                    }
+                                }
+                                &.text{
+                                    text-decoration: underline;
+                                }
+                            }
+                            &:hover{
+                                >span{
+                                    &.text{
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .tooltip-arrow{
+            border-color: $color-special-tooltip;
+        }
+        &.--width-auto{
+            .tooltip-inner{
+                &.popover-inner{
+                    min-width: auto;
+                }
+            }
+        }
+        &.--with-sm{
+            .tooltip-inner{
+                &.popover-inner{
+                    min-width: 146px;
+                }
+            }
+        }
+        &.--team-user-info{
+            .tooltip-inner{
+                &.popover-inner{
+                    .tooltip-description{
+                        text-align: center;
+                        @include fontsize-13();
+                        a{
+                            text-decoration: underline;
+                            color:$color-text-white;
+                            &:hover{
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

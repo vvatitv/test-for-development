@@ -1,0 +1,370 @@
+.modal{
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+    // &::-webkit-scrollbar-button {
+    //     background: #ccc
+    // }
+    // &::-webkit-scrollbar-track-piece {
+    //     background: #888
+    // }
+    // &::-webkit-scrollbar-thumb {
+    //     background: #eee
+    // }​
+    .modal-dialog{
+        z-index:1041;
+        @include media(992) {
+            max-width: 880px;
+        }
+        // @include media(1920) {
+        //     min-width: 1140px;
+        // }
+        .modal-content{
+            border:0;
+            @include border-radius(4px);
+            background: $color-bg-white;
+            @include box-shadow(none);
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            .modal-body{
+                padding: 15px 15px 15px 15px;
+                margin: 0 0 0 0;
+                border:0;
+                @include border-radius(0);
+                background: $color-bg-white;
+                color: $color-text-black;
+                @include fontsize-15();
+                font-family: $font-sans-default;
+                @include media(992) {
+                    @include fontsize-15();
+                }
+                @include media(1200) {
+                    padding: 16px 24px 24px 24px;
+                }
+                ol{
+                    padding: 0;
+                    margin: 12px 0 12px 20px;
+                    >li{
+                        padding: 0 0 0 6px;
+                        margin: 0 0 6px 0;
+                        position: relative;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }   
+                }
+                ul{
+                    padding: 0;
+                    margin: 12px 0;
+                    list-style:none;
+                    >li{
+                        padding: 0 0 0 12px;
+                        margin: 0 0 12px 0;
+                        position: relative;
+                        &:before{
+                            content:'';
+                            position: absolute;
+                            left: 0;
+                            top: 9.5px;
+                            width: 4px;
+                            height: 1px;
+                            @include border-radius(4px);
+                            background: $color-text-dark-grey;
+                        }
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                    &.--circle{
+                        >li{
+                            &:before{
+                                content:'';
+                                position: absolute;
+                                left: 0;
+                                top: 8.5px;
+                                width: 4px;
+                                height: 4px;
+                                @include border-radius(100%);
+                                background: $color-text-dark-grey;
+                            }
+                        }
+                    }
+                }
+                p{
+                    margin-bottom: 12px;
+                }
+                h5{
+                    color: $color-text-black;
+                    font-family: $font-sans-bold;
+                    padding: 0;
+                    margin: 0 0 12px 0;
+                    @include fontsize-15();
+                    @include media(992) {
+                        @include fontsize-17();
+                    }
+                }
+                h3{
+                    color: $color-text-black;
+                    font-family: $font-sans-bold;
+                    padding: 0;
+                    margin: 0 0 12px 0;
+                    @include fontsize-17();
+                    @include media(992) {
+                        @include fontsize-24();
+                    }
+                }
+                .teams-mentor-message{
+                    padding: 0;
+                    margin: 0;
+                    .teams-mentor-message-info{
+                        padding: 0;
+                        margin: 0 0 44px 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        @include media(576) {
+                            flex-direction: row;
+                            justify-content: flex-start;
+                        }
+                        .teams-mentor-data{
+                            padding: 0;
+                            margin: 0;
+                            text-align:center;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            @include media(576) {
+                                align-items: flex-start;
+                            }
+                            >span{
+                                display: inline-flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                &.type{
+                                    padding: 0;
+                                    margin: 0 0 6px 0;
+                                    font-family: $font-sans-default;
+                                    color: $color-banner-903;
+                                    @include fontsize-14();
+                                }
+                                &.name{
+                                    font-family: $font-sans-bold;
+                                    color: $color-text-black;
+                                    padding: 0;
+                                    margin: 0;
+                                    @include fontsize-16();
+                                }
+                            }
+                        }
+                        .teams-mentor-picture{
+                            padding: 0;
+                            margin: 0 0 12px 0;
+                            @include media(576) {
+                                margin: 0 12px 0 0;
+                            }
+                            >span{
+                                padding: 0;
+                                margin: 0;
+                                display: inline-flex;
+                                align-items: center;
+                                justify-content: center;
+                                &.icon{
+                                    padding: 0;
+                                    margin: 0;
+                                    min-width: 54px;
+                                    width: 54px;
+                                    height: 54px;
+                                    @include border-radius(100%);
+                                    overflow: hidden;
+                                    >img{
+                                        display: block;
+                                        max-width: 100%;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .briefcase-description-container{
+                    padding: 0;
+                    margin: 0;
+                    font-family: $font-sans-default;
+                    @include fontsize-15();
+                    color: $color-special-tab;
+                    >p{
+                        margin-bottom: 6px;
+                    }
+                    >h1,
+                    >h2,
+                    >h3,
+                    >h4,
+                    >h5{
+                        font-family: $font-sans-bold;
+                        font-weight: normal;
+                        @include fontsize-16();
+                        color: $color-text-black;
+                        padding: 0;
+                        margin: 12px 0 12px 0;
+                    }
+                }
+                &.--quizzes-results-calculation{
+                    padding: 30px 15px;
+                    @include media(768) {
+                        padding: 30px 40px;
+                    }
+                    @include media(992) {
+                        padding: 80px 40px;
+                    }
+                    .quizzes-results-calculation-modal-body{
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        >span{
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 0;
+                            margin: 0;
+                            &.icon{
+                                padding: 0;
+                                margin: 0 0 42px 0;
+                                max-width: 120px;
+                                @include media(576) {
+                                    max-width: 160px;
+                                    margin-bottom: 80px;
+                                }
+                                @include media(992) {
+                                    max-width: none;
+                                    margin-bottom: 120px;
+                                }
+                                >img{
+                                    margin: 0 auto;
+                                }
+                            }
+                            &.text{
+                                font-family: $font-sans-bold;
+                                color: $color-text-dark;
+                                @include fontsize-20();
+                                @include media(576) {
+                                    @include fontsize-24();
+                                }
+                                @include media(992) {
+                                    @include fontsize-42();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .modal-footer{
+                border:0;
+                padding: 0 15px 15px 15px;
+                margin: 0;
+                justify-content: flex-start;
+                @include media(1200) {
+                    padding: 0 24px 24px 24px;
+                }
+                .form-main-container{
+                    @include media(0, 767) {
+                        width: 100%;
+                    }
+                    >.form-group{
+                        &.--submit{
+                            >ul{
+                                @include media(0, 767) {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 100%;
+                                    flex-direction: column;
+                                }
+                                >li{
+                                    @include media(0, 767) {
+                                        margin: 0 0 15px 0;
+                                        width: 100%;
+                                    }
+                                    .--button-submit{
+                                        @include media(0, 767) {
+                                            width: 100%;
+                                            margin: 0;
+                                        }
+                                    }
+                                    &:last-child{
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            .modal-header{
+                padding: 16px 16px 16px 24px;
+                margin: 0;
+                border:0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: none;
+                border-bottom: 1px solid $color-border-main;
+                .modal-title{
+                    h3{
+                        padding: 0;
+                        margin: 0;
+                        font-family: $font-sans-bold;
+                        @include fontsize-17();
+                        color: $color-text-black;
+                        @include media(992) {
+                            @include fontsize-20();
+                        }
+                        @include media(1200) {
+                            @include fontsize-24();
+                        }
+                        @include media(1400) {
+                            @include fontsize-28();
+                        }
+                    }
+                }
+                .modal-close{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    >button{
+                        padding: 0;
+                        margin: 0;
+                        background: none;
+                        width: 32px;
+                        height: 32px;
+                        border:0;
+                        @include border-radius(0);
+                        @include opacity(0.6);
+                        >svg{
+                            fill: $color-text-black;
+                            width: 15px;
+                            display: inline-flex;
+                        }
+                        &:hover{
+                            @include opacity(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .modal-backdrop{
+        background-color: $color-overlay;
+        &.show{
+            @include opacity(0.4);
+        }
+    }
+}

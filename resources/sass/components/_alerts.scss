@@ -1,0 +1,187 @@
+.alert{
+    padding: 8px 8px 8px 8px;
+    margin: 36px 0;
+    border:0;
+    @include border-radius(4px);
+    font-family: $font-sans-default;
+    @include fontsize-15();
+    background:none;
+    border:1px solid;
+    .alert-main-container{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        >span{
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            &.text{
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+                a{
+                    color: $color-text-link;
+                }
+                p{
+                    margin-bottom: 12px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &.icon{
+                padding: 0;
+                margin: 2px 11px 0 0;
+                >svg{
+                    .--icon-svg-icon{}
+                    .--icon-svg-round{}
+                }
+            }
+        }
+    }
+    &.alert-success{
+        background: $color-state-success-light;
+        border-color: $color-state-success-light;
+        .alert-main-container{
+            >span{
+                &.icon{
+                    >svg{
+                        .--icon-svg-icon{
+                            fill: $color-state-success-light;
+                        }
+                        .--icon-svg-round{
+                            fill: $color-state-success;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.alert-danger{
+        background: $color-alert-101;
+        border-color: $color-alert-101;
+        color: $color-state-error;
+        .alert-main-container{
+            >span{
+                &.icon{
+                    >svg{
+                        .--icon-svg-icon{
+                            fill: $color-alert-101;
+                        }
+                        .--icon-svg-round{
+                            fill: $color-alert-100;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.alert-info{
+        background: $color-bg-blue-grey;
+        border-color:$color-bg-blue-grey;
+        color: $color-special-purple;
+        .alert-main-container{
+            >span{
+                &.icon{
+                    >svg{
+                        .--icon-svg-icon{
+                            fill: $color-bg-blue-grey;
+                        }
+                        .--icon-svg-round{
+                            fill: $color-special-purple;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.alert-warning{
+        background: $color-alert-201;
+        border-color: $color-alert-201;
+        .alert-main-container{
+            >span{
+                &.icon{
+                    >svg{
+                        .--icon-svg-icon{
+                            fill: $color-alert-201;
+                        }
+                        .--icon-svg-round{
+                            fill: $color-alert-200;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.notes-progress-container{
+    padding: 15px 15px;
+    margin: 52px 0;
+    border:1px solid $color-special-purple;
+    background: $color-special-purple-100;
+    @include border-radius(4px);
+    @include media(992) {
+        padding: 22px 22px;
+    }
+    .text{
+        font-family: $font-sans-default;
+        color: $color-text-dark-grey;
+        @include fontsize-15();
+        @include media(992) {
+            @include fontsize-17();
+        }
+        a{
+            color: $color-text-link;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        >p{
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .heading{
+        padding: 0;
+        margin: 0 0 12px 0;
+        h4{
+            padding: 0;
+            margin: 0;
+            font-family: $font-sans-bold;
+            color: $color-text-black;
+            @include fontsize-17();
+            @include media(992) {
+                @include fontsize-20();
+            }
+        }
+    }
+    &.--in-game{
+        margin: 32px 0;
+        background: $color-alert-401;
+        border-color: $color-alert-300;
+        .text{
+            color: $color-alert-301;
+        }
+        .heading{
+            h4{
+                color: $color-alert-300;
+            }
+        }
+    }
+    &.--in-out-game{
+        margin: 32px 0;
+        border-color: $color-banner-902;
+        background: $color-banner-904;
+        .text{
+            color: $color-alert-301;
+        }
+        .heading{
+            h4{
+                color: $color-banner-903;
+            }
+        }
+    }
+}

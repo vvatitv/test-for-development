@@ -1,0 +1,19 @@
+.card-box-container{
+    .card-box-dialog{
+        .card-box-body{
+        }
+        .card-box-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0 0 16px 0;
+            .card-box-close{
+                padding: 0;
+                margin: 0 0 0 auto;
+            }
+            .card-box-title{
+            }
+        }
+    }
+}

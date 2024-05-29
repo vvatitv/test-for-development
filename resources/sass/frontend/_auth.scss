@@ -1,0 +1,80 @@
+main{
+    &.main{
+        .main-body-container{
+            .main-page-container{
+                &.--page-auth{
+                    background: $color-bg-white;
+                    padding: 15px 15px;
+                    margin: 0 auto;
+                    border:0;
+                    @include border-radius(4px);
+                    max-width: 800px;
+                    @include media(768) {
+                        padding: 20px 20px;
+                    }
+                    @include media(992) {
+                        padding: 25px 25px;
+                    }
+                    @include media(1400) {
+                        padding: 32px 32px;
+                    }
+                    .page-body{
+                        .form-main-container{
+                            .form-group{
+                                margin-bottom: 20px;
+                                &.--submit{
+                                    margin: 32px 0 0 0;
+                                }
+                            }
+                        }
+                    }
+                    .page-header{
+                        padding: 0;
+                        margin: 0 0 28px 0;
+                        >h1{
+                            color:$color-text-black;
+                            font-family: $font-sans-bold;
+                            font-size:rem(20px);
+                            line-height: 28px;
+                            padding: 0;
+                            margin: 0 0 12px 0;
+                            @include media(992) {
+                                font-size:rem(24px);
+                                line-height: 30px;
+                            }
+                            @include media(1400) {
+                                font-size:rem(28px);
+                                line-height: 36px;
+                            }
+                        }
+                        .note{
+                            color: $color-text-dark-grey;
+                            font-family: $font-sans-default;
+                            font-size:rem(15px);
+                            line-height: 22px;
+                            @include media(1400) {
+                                font-size:rem(17px);
+                                line-height: 24px;
+                            }
+                            >p{
+                                margin: 0 0 12px 0;
+                                &:last-child{
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                    &.--page-auth-verify{
+                        .page-body{
+                            .form-main-container{
+                                .form-fields-group{
+                                    margin-bottom: 52px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+// .quillWrapper{
+// 	border:1px solid $color-border-main;
+// 	padding: 0;
+// 	margin: 0;
+// 	@include border-radius(4px);
+// 	.ql-container{
+// 		padding: 0!important;
+// 		margin: 0!important;
+// 		border:0 !important;
+// 		.ql-clipboard{}
+// 		.ql-tooltip{
+// 			&.ql-hidden{}
+// 		}
+// 		&.ql-editor{
+// 			&.ql-blank{}
+// 		}
+// 		&.ql-snow{}
+// 	}
+// 	.ql-toolbar{
+// 		border:0!important;
+// 		padding: 0!important;
+// 		margin: 0!important;
+// 		.ql-formats{
+// 			button{}
+// 		}
+// 		&.ql-snow{}
+// 	}
+// }

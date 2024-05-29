@@ -1,0 +1,49 @@
+.loader-main-container{
+    .loading-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        >svg{
+            animation: loader-loading-rotate 2s linear infinite;
+            width: 50px;
+            height: 50px;
+            >.path{
+                stroke: $color-special-purple;
+                fill: rgba($color-special-purple-100, 0.5);
+                stroke-linecap: round;
+                animation: loader-loading-dash 1.5s ease-in-out infinite;
+            }
+        }                
+    }
+    @each $name, $color in $StylesColors {
+        &.--color-#{$name}{
+            .loading-container{
+                >svg{
+                    >.path{
+                        stroke: $color;
+                    }
+                }
+            }
+        }
+    }
+}
+@include keyframes(loader-loading-rotate) {
+    100%{
+        @include rotate(360);
+    }
+}
+@include keyframes(loader-loading-dash) {
+    0%{
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100%{
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}

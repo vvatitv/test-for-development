@@ -1,0 +1,62 @@
+// @mixin font-face($name, $src, $filesrc, $weight: 'normal', $style: 'normal', $display: 'swap', $displayHidden: 0){
+// 	@font-face {
+// 		font-family: quote($name);
+// 		src: url($src + $filesrc + '.eot');
+// 		src: url($src + $filesrc + '.woff2') format('woff2'),
+// 			url($src + $filesrc + '.woff') format('woff'),
+// 			url($src + $filesrc + '.ttf') format('truetype'),
+// 			url($src + $filesrc + '.svg##{$name}') format('svg'),
+// 			url($src + $filesrc + '.eot?#iefix') format('embedded-opentype');
+// 		font-weight: unquote($weight);
+// 		font-style: unquote($style);
+// 		@if $displayHidden == 0 {
+// 			font-display: unquote($display);
+// 		}
+// 	}
+// }
+
+@include font-face('pts-regular', '../fonts/', 'pts-regular', 'normal', 'normal');
+// @include font-face('pts-italic', '../fonts/', 'pts-italic', 'normal', 'italic');
+@include font-face('pts-bold', '../fonts/', 'pts-bold', 'bold', 'normal');
+// @include font-face('pts-bold-italic', '../fonts/', 'pts-bold-italic', 'bold', 'italic');
+
+
+.--font-size-10{
+    @include fontsize-10('!important');
+}
+.--font-size-11{
+    @include fontsize-11('!important');
+}
+.--font-size-12{
+    @include fontsize-12('!important');
+}
+.--font-size-13{
+    @include fontsize-13('!important');
+}
+.--font-size-14{
+    @include fontsize-14('!important');
+}
+.--font-size-15{
+    @include fontsize-15('!important');
+}
+.--font-size-16{
+    @include fontsize-16('!important');
+}
+.--font-size-17{
+    @include fontsize-17('!important');
+}
+.--font-size-20{
+    @include fontsize-20('!important');
+}
+.--font-size-24{
+    @include fontsize-24('!important');
+}
+.--font-size-28{
+    @include fontsize-28('!important');
+}
+.--font-size-32{
+    @include fontsize-32('!important');
+}
+.--font-size-42{
+    @include fontsize-42('!important');
+}

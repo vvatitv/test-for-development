@@ -1,0 +1,163 @@
+body{
+    color: $color-text-black;
+    background: $color-bg-white;
+    display: block;
+    font-family: 'PT Sans', sans-serif;
+}
+@page {
+    margin: rem(30px) rem(56px);
+}
+.page-break {
+    page-break-after: always;
+}
+main{
+    &.main{
+        .main-body-container{
+            .invitation-main-container{
+                padding: 0;
+                max-width: rem(595px);
+                margin: rem(30px) auto;
+                .invitation-body{
+                    @include fontsize-15();
+                    line-height: rem(18px);
+                    padding: 0;
+                    margin: 0;
+                    font-weight: 400;
+                    color: $color-text-dark-grey;
+                    >p{
+                        padding: 0;
+                        margin: 0 0 rem(12px) 0;
+                    }
+                    .programs-alt{
+                        padding: 0;
+                        margin: rem(20px) 0 0 0;
+                        text-align:center;
+                        font-weight: 700;
+                        @include fontsize-17();
+                        line-height: 20px;
+                        color: $color-text-black;
+                    }
+                    .requests{
+                        padding: 0;
+                        margin: rem(40px) 0 rem(70px) 0;
+                        text-align:center;
+                        font-weight: 700;
+                        @include fontsize-28();
+                        color: $color-text-black;
+                    }
+                    .programs{
+                        padding: 0;
+                        margin: rem(20px) 0 0 0;
+                        ul{
+                            padding: 0;
+                            margin: 0;
+                            list-style:none;
+                            >li{
+                                padding: 0;
+                                margin: rem(2px) 0 0 0;
+                                color: $color-text-dark-grey;
+                                &:first-child{
+                                    margin-top: 0;
+                                }
+                            }
+                        }
+                        h3{
+                            padding: 0;
+                            margin: 0 0 rem(8px) 0;
+                            font-weight: 700;
+                            @include fontsize-17();
+                            color: $color-text-black;
+                        }
+                    }
+                    .address{
+                        padding: 0;
+                        margin: rem(20px) 0 0 0;
+                        table{
+                            padding: 0;
+                            margin: 0;
+                            width: 100%;
+                            tr{
+                                td{
+                                    padding: rem(4px) rem(7.5px);
+                                    border: 0;
+                                    >p{
+                                        margin-bottom: rem(12px);
+                                        &:last-child{
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                    >strong{
+                                        font-weight: 700;
+                                        @include fontsize-17();
+                                        line-height: rem(18px);
+                                    }
+                                    &:first-child{
+                                        padding-left: 0;
+                                        min-width: rem(100px);
+                                        color: $color-text-black;
+                                    }
+                                    &:last-child{
+                                        padding-right: 0;
+                                        color: $color-text-dark-grey;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .regards{
+                        padding: 0;
+                        margin: rem(30px) 0 0 0;
+                        font-weight: 700;
+                        @include fontsize-17();
+                        line-height: 19px;
+                        color: $color-text-black;
+                        p{
+                            margin-bottom: 0;
+                        }
+                    }
+                    .team-name{
+                        padding: 0;
+                        margin: 0 0 rem(12px) 0;
+                        text-align: center;
+                        h2{
+                            padding: 0;
+                            margin: 0;
+                            font-weight: 700;
+                            color: $color-text-black;
+                            text-align: center;
+                            @include fontsize-17();
+                            color: $color-text-black;
+                        }
+                    }
+                    .user-name{
+                        text-align: center;
+                        padding: 0;
+                        margin: 0 0 rem(12px) 0;
+                        h2{
+                            padding: 0;
+                            margin: 0;
+                            font-weight: 700;
+                            color: $color-text-black;
+                            text-align: center;
+                            @include fontsize-28();
+                            color: $color-text-black;
+                        }
+                    }
+                }
+                .invitation-header{
+                    padding: 0;
+                    margin: 0 0 rem(30px) 0;
+                    .logo{
+                        >svg{
+                            min-width: rem(170px);
+                            max-width: rem(170px);
+                        }
+                        >img{
+                            min-width: rem(170px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "pt sans": {
+        "italic": "C:\\OSPanel6\\home\\activation-2024.local\\storage\\app\/public\/fonts\/pt_sans_italic_0ced8d933f5f0a9fc20c6a91eb08a9d1",
+        "bold_italic": "C:\\OSPanel6\\home\\activation-2024.local\\storage\\app\/public\/fonts\/pt_sans_bold_italic_154e31a93d0b0db9df2523031f3c7938",
+        "normal": "pt_sans_normal_fa52bdbac54dbb0189884934fe13d6a1",
+        "bold": "C:\\OSPanel6\\home\\activation-2024.local\\storage\\app\/public\/fonts\/pt_sans_bold_52b1251f7308594ddde21160a3e98660"
+    },
+    "pts-regular": {
+        "normal": "pts_regular_normal_be72f805b2122a40001ae70fac653e0e"
+    },
+    "pts-bold": {
+        "bold": "pts_bold_bold_46f1a262417fef525c785a68039d80bb"
+    }
+}

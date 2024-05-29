@@ -1,0 +1,136 @@
+.banner-main-container{
+    padding: 32px 32px;
+    margin: 32px 0;
+    background: $color-bg-white;
+    min-height: 274px;
+    @include border-radius(4px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #7F7FD5;
+    background: -moz-linear-gradient(146deg, #7F7FD5 23.23%, #86A8E7 52.15%, #64C9C9 78.11%);
+    background: -webkit-linear-gradient(146deg, #7F7FD5 23.23%, #86A8E7 52.15%, #64C9C9 78.11%);
+    background: linear-gradient(146deg, #7F7FD5 23.23%, #86A8E7 52.15%, #64C9C9 78.11%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7F7FD5",endColorstr="#64C9C9",GradientType=1);
+    @include media(992) {
+        align-items: flex-start;
+        background: #7F7FD5;
+        background: -moz-linear-gradient(90deg, #7F7FD5 0%, #86A8E7 44%, #64C9C9 83.5%);
+        background: -webkit-linear-gradient(90deg, #7F7FD5 0%, #86A8E7 44%, #64C9C9 83.5%);
+        background: linear-gradient(90deg, #7F7FD5 0%, #86A8E7 44%, #64C9C9 83.5%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7F7FD5",endColorstr="#64C9C9",GradientType=1);
+    }
+    &:before{
+        content:none;
+        position: absolute;
+        top:0;
+        right:32px;
+        margin: auto;
+        width: 426px;
+        height: 274px;
+        background: url('../images/banner-background-illustration.svg') center center no-repeat;
+        @include media(992) {
+            content:'';
+        }
+    }
+    .banner-buttons-container{
+        padding: 0;
+        margin: 0 0 0 0;
+        width: 100%;
+        >a,
+        >button{
+            border:0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            @include box-shadow(none);
+            outline:0;
+            @include border-radius(0);
+            text-decoration: none;
+            padding: 12px 32px;
+            min-width: 185px;
+            margin: 0 0 0 0;
+            font-family: $font-sans-bold;
+            @include fontsize-15();
+            color: $color-text-white;
+            @include border-radius(4px);
+            width: 100%;
+            background: $color-banner-901;
+            @include media(992) {
+                width: auto;
+            }
+            &:hover{
+                text-decoration: none;
+                background: $color-banner-902;
+            }
+            &:focus{
+                background: $color-banner-903;
+            }
+        }
+    }
+    .banner-body-container{
+        color: $color-text-white;
+        font-family: $font-sans-default;
+        padding: 0;
+        margin: 12px 0 32px 0;
+        z-index:3;
+        position: relative;
+        max-width: 675px;
+        text-align: center;
+        @include fontsize-15();
+        @include media(992) {
+            text-align: left;
+            @include fontsize-17();
+        }
+        a{
+            text-decoration: none;
+            outline:0;
+            color: $color-text-link;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        p{
+            margin-bottom: 12px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        &.--without-header{
+            margin-top: 0;
+        }
+        &.--without-buttons{
+            margin-bottom: 0;
+        }
+    }
+    .banner-heading-container{
+        padding: 0;
+        margin: 0 0 0 0;
+        z-index:3;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        @include media(992) {
+            text-align: left;
+        }
+        h3{
+            padding: 0;
+            margin: 0;
+            color: $color-text-white;
+            font-family: $font-sans-bold;
+            @include fontsize-24();
+            @include media(992) {
+                @include fontsize-32();
+            }
+        }
+        .label{
+            color: $color-text-white;
+            font-family: $font-sans-bold;
+            @include fontsize-15();
+            padding: 0;
+            margin: 0 0 8px 0;
+        }
+    }
+}

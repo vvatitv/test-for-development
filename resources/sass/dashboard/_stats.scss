@@ -1,0 +1,121 @@
+.admin-main{
+    .admin-container{
+        .admin-filter{
+            .admin-stats-container{
+                .card{
+                    .card-body{
+                        .belbin-labels{
+                            padding: 0;
+                            margin: 52px 0 0 0;
+                            >ul{
+                                padding: 0;
+                                margin: 0 -6px;
+                                list-style:none;
+                                outline:0;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                flex-wrap: wrap;
+                                >li{
+                                    padding: 0 6px;
+                                    margin: 12px 0 0 0;
+                                    display: inline-flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    >span{
+                                        display: inline-flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        &.text{
+                                            font-family: $font-sans-default;
+                                            color: $color-text-dark;
+                                            @include fontsize-13();
+                                            padding: 0;
+                                            margin: 0 8px;
+                                        }
+                                        &.percent{
+                                            font-family: $font-sans-bold;
+                                            color: $color-text-dark-grey;
+                                            @include fontsize-13();
+                                        }
+                                        &.icon{
+                                            width: 8px;
+                                            height: 8px;
+                                            @include border-radius(100%);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .belbin-graph{
+                            .note{
+                                color: $color-text-black;
+                                @include fontsize-13();
+                                padding: 0;
+                                margin: 26px 0 0 0;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-family: $font-sans-default;
+                                >span{
+                                    display: inline-flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    &.icon{
+                                        width: 18px;
+                                        height: 18px;
+                                        padding: 0;
+                                        margin: 0 12px 0 0;
+                                        >svg{
+                                            .--icon-svg-round{
+                                                fill: $color-bg-blue-grey;
+                                            }
+                                            .--icon-svg-icon{
+                                                fill: $color-icon-dark-grey;
+                                            }
+                                        }
+                                    }
+                                    &.text{}
+                                }
+                            }
+                            .graph{
+                                .cdc-container{
+                                    .cdc{
+                                        @include media(0, 576) {
+                                            width: 220px !important;
+                                            padding-bottom: 220px !important;
+                                        }
+                                        .cdc-overlay{
+                                            .cdc-text{
+                                                .numbers{
+                                                    color: $color-text-grey;
+                                                    font-family: $font-sans-default;
+                                                    @include fontsize-15();
+                                                    padding: 0;
+                                                    margin: 0 0 4px 0;
+                                                    strong{
+                                                        font-family: $font-sans-bold;
+                                                        @include fontsize-32();
+                                                        color: $color-text-dark;
+                                                    }
+                                                }
+                                                .text{
+                                                    color: $color-text-grey;
+                                                    font-family: $font-sans-default;
+                                                    @include fontsize-13();
+                                                    padding: 0;
+                                                    margin: 0;
+                                                }
+                                            }
+                                        }
+                                        .cdc-sections{}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

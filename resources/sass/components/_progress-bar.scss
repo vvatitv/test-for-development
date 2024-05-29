@@ -1,0 +1,29 @@
+.progress-bar-main-container{
+    padding: 0;
+    margin: 0;
+    .progress{
+        padding: 0;
+        margin: 0;
+        height: 2px;
+        background: $color-special-purple-100;
+        @include fontsize-13();
+        font-family: $font-sans-default;
+        color: $color-text-white;
+        @include border-radius(4px);
+        .progress-bar{
+            padding: 0;
+            margin: 0;
+            color: $color-text-white;
+            background: $color-special-purple;
+            @include border-radius(4px);
+        }
+    }
+    .note{
+        color: $color-text-grey;
+        @include fontsize-13();
+        padding: 0;
+        margin: 4px 0 0 0;
+        font-family: $font-sans-default;
+        display: block;
+    }
+}

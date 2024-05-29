@@ -1,0 +1,304 @@
+$rem-basefont: 16px;
+$rem-fallback: false;
+$rem-px-only: true;
+
+
+$color-text-white: #ffffff;
+
+$color-text-black: #253639;
+$color-text-dark: $color-text-black;
+$color-text-dark-grey: #5F6B6D;
+$color-text-grey: #989FA0;
+$color-text-light-grey: #D1D3D3;
+$color-text-link: #086BEB;
+$color-text-link-visited: #4B90E9;
+
+$color-icon-black: $color-text-black;
+$color-icon-white: $color-text-white;
+$color-icon-dark-grey: $color-text-dark-grey;
+$color-icon-grey: $color-text-grey;
+
+$color-brand-white: $color-text-white;
+$color-brand-red-primary: #C23D3C;
+$color-brand-red-hover: #CD706F;
+$color-brand-red-pressed: #9B3130;
+
+
+$color-bg-white: #ffffff;
+$color-bg-primary: #FAF9F7;
+$color-bg-light-grey: #FAFAFA;
+$color-bg-blue-grey: #F7F8FC;
+$color-bg-disabled: #D4D4D4;
+$color-bg-footer: #F2F2F0;
+$color-bg-alert: #FEE8E9;
+$color-bg-black: #000000;
+
+
+$color-border-main: #E7E7E7;
+$color-border-active: #363638;
+
+
+$color-special-yellow: #FFC141;
+$color-special-purple: #776FEF;
+$color-special-purple-100: #EEECF7;
+$color-special-purple-200: #D9D3F4;
+$color-special-tooltip: #302C60;
+$color-special-pink: #D7699B;
+$color-special-tab: #4C595C;
+
+$color-button-secondary: #EFECE6;
+$color-button-disabled: #D5D5D5;
+$color-divider: #F0EEE9;
+
+$color-state-error: #F60330;
+$color-state-error-light: #fee7ea;
+$color-state-notification: #3572F2;
+$color-state-warning: #F2EB35;
+$color-state-hover: #EAEAEA;
+$color-state-success: #12B463;
+$color-state-success-light: #EAF7EE;
+$color-state-disabled: #F4F4F4;
+
+
+$color-overlay: #A2ACAE;
+
+
+$color-alert-100: #EC3636;
+$color-alert-101: #FFECEC;
+$color-alert-200: #FFC107;
+$color-alert-201: #FFF8E0;
+$color-alert-300: #5ABAB4;
+$color-alert-301: #4C595C;
+$color-alert-401: #F1FFFD;
+
+
+$color-banner-100: #2516EF;
+$color-banner-200: #554aef;
+$color-banner-300: #776FEF;
+$color-banner-400: #9248C0;
+$color-banner-500: #D7699B;
+$color-banner-600: #FF9E9F;
+$color-banner-700: #FFC141;
+$color-banner-710: #fab45c;
+$color-banner-800: #8278FC;
+$color-banner-900: #958cf7;
+$color-banner-901: #7B6AE9;
+$color-banner-902: #A09AFF;
+$color-banner-903: #5F58C0;
+$color-banner-904: #F2EFFF;
+
+
+$color-tracks-100: #EEF6FF;
+$color-tracks-150: #DDEDFF;
+$color-tracks-200: #78A4EA;
+
+$color-tracks-300: #FFF9F8;
+$color-tracks-350: #FFE5E1;
+$color-tracks-380: #FFEDEA;
+$color-tracks-400: #EB7551;
+
+$color-tracks-500: #EFFFFF;
+$color-tracks-540: #F1FFFF;
+$color-tracks-550: #E1FEFE;
+$color-tracks-600: #6DD2D2;
+
+
+$color-tests-blue: #627FE2;
+$color-tests-blue-light: #1FA5CF;
+$color-tests-yellow: #FFE350;
+$color-tests-red-light: #E27262;
+$color-tests-green: #1FCF50;
+$color-tests-purple: #811FCF;
+$color-tests-purple-light: #CC1FCF;
+$color-tests-red-dark: #CF1F49;
+
+
+$color-tests-red: #FF1616;
+$color-tests-blue-dark: #006BC6;
+$color-tests-orange: #F79646;
+$color-tests-yellow-light: #EADBA4;
+$color-tests-purle: #743DA5;
+
+$color-100: #EEF1FC;
+$color-200: #4B90E9;
+
+$color-winner-100: #EBBD1F;
+$color-winner-200: #D2D8DA;
+$color-winner-300: #CD7F32;
+
+$StylesColors: (
+
+    'winner-100': $color-winner-100,
+    'winner-200': $color-winner-200,
+    'winner-300': $color-winner-300,
+
+    'text-light-grey': $color-text-light-grey,
+
+    'tests-purle': $color-tests-purle,
+    'tests-red': $color-tests-red,
+    'tests-blue-dark': $color-tests-blue-dark,
+    'tests-orange': $color-tests-orange,
+    'tests-yellow-light': $color-tests-yellow-light,
+
+    'tests-blue': $color-tests-blue,
+    'tests-blue-light': $color-tests-blue-light,
+    'tests-yellow': $color-tests-yellow,
+    'tests-red-light': $color-tests-red-light,
+    'tests-green': $color-tests-green,
+    'tests-purple': $color-tests-purple,
+    'tests-purple-light': $color-tests-purple-light,
+    'tests-red-dark': $color-tests-red-dark,
+
+
+    'text-white': $color-text-white,
+    'text-black': $color-text-black,
+    'text-dark-grey': $color-text-dark-grey,
+    'text-grey': $color-text-grey,
+    'text-link': $color-text-link,
+    'text-link-visited': $color-text-link-visited,
+
+
+    'icon-black': $color-icon-black,
+    'icon-white': $color-icon-white,
+    'icon-dark-grey': $color-icon-dark-grey,
+    'icon-grey': $color-icon-grey,
+
+
+    'brand-white': $color-brand-white,
+    'brand-red-primary': $color-brand-red-primary,
+    'brand-red-hover': $color-brand-red-hover,
+    'brand-red-pressed': $color-brand-red-pressed,
+
+
+    'bg-white': $color-bg-white,
+    'bg-primary': $color-bg-primary,
+    'bg-light-grey': $color-bg-light-grey,
+    'bg-blue-grey': $color-bg-blue-grey,
+    'bg-disabled': $color-bg-disabled,
+    'bg-footer': $color-bg-footer,
+    'bg-alert': $color-bg-alert,
+    'bg-black': $color-bg-black,
+
+
+    'border-main': $color-border-main,
+    'border-active': $color-border-active,
+
+
+    'special-yellow': $color-special-yellow,
+    'special-purple': $color-special-purple,
+    'special-purple-100': $color-special-purple-100,
+    'special-purple-200': $color-special-purple-200,
+    'special-tooltip': $color-special-tooltip,
+    'special-pink': $color-special-pink,
+
+
+    'button-secondary': $color-button-secondary,
+    'divider': $color-divider,
+    'overlay': $color-overlay,
+
+    'alert-100': $color-alert-100,
+    'alert-101': $color-alert-101,
+    'alert-200': $color-alert-200,
+    'alert-201': $color-alert-201,
+
+    'state-error': $color-state-error,
+    'state-error-light': $color-state-error-light,
+    'state-notification': $color-state-notification,
+    'state-warning': $color-state-warning,
+    'state-hover': $color-state-hover,
+    'state-success': $color-state-success,
+    'state-success-light': $color-state-success-light,
+    'state-disabled': $color-state-disabled,
+
+    'banner-100': $color-banner-100,
+    'banner-200': $color-banner-200,
+    'banner-300': $color-banner-300,
+    'banner-400': $color-banner-400,
+    'banner-500': $color-banner-500,
+    'banner-600': $color-banner-600,
+    'banner-700': $color-banner-700,
+    'banner-710': $color-banner-710,
+    'banner-800': $color-banner-800,
+    'banner-900': $color-banner-900,
+    'banner-901': $color-banner-901,
+    'banner-902': $color-banner-902,
+    'banner-903': $color-banner-903,
+
+    'tracks-100': $color-tracks-100,
+    'tracks-200': $color-tracks-200,
+    'tracks-300': $color-tracks-300,
+    'tracks-400': $color-tracks-400,
+    'tracks-500': $color-tracks-500,
+    'tracks-600': $color-tracks-600,
+);
+
+@mixin fontsize-42($property: '')
+{
+    font-size:rem(42px)#{$property};
+    line-height: rem(50px)#{$property};
+}
+@mixin fontsize-32($property: '')
+{
+    font-size:rem(32px)#{$property};
+    line-height: rem(40px)#{$property};
+}
+@mixin fontsize-28($property: '')
+{
+    font-size:rem(28px)#{$property};
+    line-height: rem(36px)#{$property};
+}
+@mixin fontsize-24($property: '')
+{
+    font-size:rem(24px)#{$property};
+    line-height: rem(32px)#{$property};
+}
+@mixin fontsize-20($property: '')
+{
+    font-size:rem(20px)#{$property};
+    line-height: rem(28px)#{$property};
+}
+@mixin fontsize-18($property: '')
+{
+    font-size:rem(18px)#{$property};
+    line-height: rem(24px)#{$property};
+}
+@mixin fontsize-17($property: '')
+{
+    font-size:rem(17px)#{$property};
+    line-height: rem(24px)#{$property};
+}
+@mixin fontsize-16($property: '')
+{
+    font-size:rem(16px)#{$property};
+    line-height: rem(20px)#{$property};
+}
+@mixin fontsize-15($property: '')
+{
+    font-size:rem(15px)#{$property};
+    line-height: rem(22px)#{$property};
+}
+@mixin fontsize-14($property: '')
+{
+    font-size:rem(14px)#{$property};
+    line-height: rem(17px)#{$property};
+}
+@mixin fontsize-13($property: '')
+{
+    font-size:rem(13px)#{$property};
+    line-height: rem(20px)#{$property};
+}
+@mixin fontsize-12($property: '')
+{
+    font-size:rem(12px)#{$property};
+    line-height: rem(16px)#{$property};
+}
+@mixin fontsize-11($property: '')
+{
+    font-size:rem(11px)#{$property};
+    line-height: rem(18px)#{$property};
+}
+@mixin fontsize-10($property: '')
+{
+    font-size:rem(10px)#{$property};
+    line-height: rem(11px)#{$property};
+}

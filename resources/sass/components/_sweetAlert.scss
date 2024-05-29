@@ -1,0 +1,247 @@
+.swal2-container{
+    .swal2-popup{
+        &.swal2-toast{
+            box-shadow: none;
+            padding: 16px 35px 16px 16px;
+            margin: 0;
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            // width: auto !important;
+            @include border-radius(4px);
+            .swal2-html-container{
+                text-align: left;
+                @include fontsize-13();
+                color: $color-text-black;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                ul{
+                    padding: 0;
+                    margin: 16px 0 0 0;
+                    >li{
+                        padding: 0 0 0 12px;
+                        margin: 0 0 8px 0;
+                        position: relative;
+                        &:before{
+                            content:'';
+                            position: absolute;
+                            top:9px;
+                            left:0;
+                            width: 3px;
+                            height: 3px;
+                            @include border-radius(100%);
+                            background: $color-text-black;
+                        }
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            .swal2-input{
+                display: none;
+            }
+            .swal2-file{
+                display: none;
+            }
+            .swal2-range{
+                display: none;
+            }
+            .swal2-select{
+                display: none;
+            }
+            .swal2-radio{
+                display: none;
+            }
+            .swal2-checkbox{
+                display: none;
+            }
+            .swal2-textarea{
+                display: none;
+            }
+            .swal2-validation-message{
+                display: none;
+            }
+            .swal2-timer-progress-bar-container{
+                display: none;
+            }
+            .swal2-footer{
+                display: none;
+            }
+            .swal2-actions{
+                display: none;
+                >button{
+                    &.swal2-confirm{}
+                    &.swal2-deny{}
+                    &.swal2-cancel{}
+                }
+            }
+            .swal2-title{
+                text-align: left;
+                @include fontsize-17();
+                padding: 0;
+                margin: 0 0 8px 0;
+                width: 100%;
+            }
+            >img{
+                &.swal2-image{
+                    display: none;
+                }
+            }
+            .swal2-icon{
+                display: none;
+                padding: 0;
+                margin: 0 12px 0 0;
+                border:0;
+                animation: none;
+                color: transparent;
+                width: 20px;
+                height: 20px;
+                >span{
+                    &.swal2-x-mark{
+                        width: 20px;
+                        height: 20px;
+                        >span{
+                            display: none;
+                            &.swal2-x-mark-line-left{}
+                            &.swal2-x-mark-line-right{}
+                        }
+                    }
+                }
+                &.swal2-success{
+                    width: 20px;
+                    height: 20px;
+                    padding: 0;
+                    margin: 0 8px 0 0;
+                    position: relative;
+                    &:before{
+                        content:'';
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        bottom:0;
+                        right:0;
+                        margin: auto;
+                        width: 17px;
+                        height: 17px;
+                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17' fill='" + str-replace('#12B463', '#', '%23') + "'%3E%3Cpath d='M8.5,17A8.5,8.5,0,1,1,17,8.5,8.51,8.51,0,0,1,8.5,17Zm0-15.54a7,7,0,1,0,7,7A7.05,7.05,0,0,0,8.5,1.46Z'/%3E%3Cpath d='M8.5,9.23a.73.73,0,0,1-.73-.73V4.61a.73.73,0,0,1,1.46,0V8.5A.73.73,0,0,1,8.5,9.23Z'/%3E%3Cpath d='M8.5,13.36a1,1,0,1,0-1-1A1,1,0,0,0,8.5,13.36Z'/%3E%3C/svg%3E");
+                    }
+                    .swal2-success-line-tip,
+                    .swal2-success-line-long,
+                    .swal2-success-ring,
+                    .swal2-success-fix,
+                    .swal2-success-circular-line-right,
+                    .swal2-success-circular-line-left{
+                        display: none !important;
+                    }
+                }
+                &.swal2-error{
+                    width: 20px;
+                    height: 20px;
+                    padding: 0;
+                    margin: 0 8px 0 0;
+                    position: relative;
+                    &:before{
+                        content:'';
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        bottom:0;
+                        right:0;
+                        margin: auto;
+                        width: 17px;
+                        height: 17px;
+                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17' fill='" + str-replace('#F60330', '#', '%23') + "'%3E%3Cpath d='M8.5,17A8.5,8.5,0,1,1,17,8.5,8.51,8.51,0,0,1,8.5,17Zm0-15.54a7,7,0,1,0,7,7A7.05,7.05,0,0,0,8.5,1.46Z'/%3E%3Cpath d='M8.5,9.23a.73.73,0,0,1-.73-.73V4.61a.73.73,0,0,1,1.46,0V8.5A.73.73,0,0,1,8.5,9.23Z'/%3E%3Cpath d='M8.5,13.36a1,1,0,1,0-1-1A1,1,0,0,0,8.5,13.36Z'/%3E%3C/svg%3E");
+                    }
+                    .swal2-error-line-tip,
+                    .swal2-error-line-long,
+                    .swal2-error-ring,
+                    .swal2-error-fix,
+                    .swal2-error-circular-line-right,
+                    .swal2-error-circular-line-left{
+                        display: none !important;
+                    }
+                }
+                &.swal2-icon-show{
+                    // display: flex;
+                }
+            }
+            .swal2-loader{
+                display: none;
+            }
+            ul{
+                &.swal2-progress-steps{
+                    display: none;
+                }
+            }
+            button{
+                &.swal2-close{
+                    position: absolute;
+                    top:8px;
+                    right:8px;
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $color-state-error;
+                    @include opacity(0.6);
+                    outline:0;
+                    @include box-shadow(none);
+                    &:hover{
+                        @include opacity(1);
+                    }
+                }
+            }
+        }
+        &.swal2-icon-success{
+            padding-right: 16px;
+            &.swal2-toast{
+                flex-direction: row;
+                align-items: center;
+                background: $color-state-success-light;
+                border:1px solid $color-state-success;
+            }
+        }
+        &.swal2-icon-error{
+            padding-right: 16px;
+            &.swal2-toast{
+                flex-direction: row;
+                align-items: center;
+                background: $color-state-error-light;
+                border:1px solid $color-state-error;
+                // .swal2-icon{
+                //     &.swal2-icon-show{
+                //         display: none !important;
+                //     }
+                // }
+            }
+        }
+        &.swal2-show{}
+    }
+    &.swal2-bottom-right{
+        &.swal2-bottom-centered{
+            overflow: hidden !important;
+            padding: 32px 0;
+            bottom:0 !important;
+            top: auto !important;
+            left:0 !important;
+            right:0 !important;
+            margin: auto; 
+        }
+    }
+    &.swal2-top-right{
+        &.swal2-top-centered{
+            overflow: hidden !important;
+            padding: 32px 0;
+            bottom:auto !important;
+            top: 0 !important;
+            left:0 !important;
+            right:0 !important;
+            margin: auto; 
+        }
+    }
+    &.swal2-backdrop-show{}
+}

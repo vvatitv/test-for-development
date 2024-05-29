@@ -1,0 +1,173 @@
+.v-select{
+    &.vs--single{
+        .vs__dropdown-toggle{
+            appearance: none;
+            padding: 12px 16px 12px 12px;
+            margin: 0;
+            background: $color-bg-white;
+            border: 1px solid $color-border-main;
+            white-space: normal;
+            @include border-radius-separate(4px, 4px, 4px, 4px);
+            .vs__selected-options{
+                padding: 0 15px 0 0;
+                margin: 0;
+                flex-wrap: nowrap;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-direction: row;
+                .vs__selected{
+                    padding: 0;
+                    margin: 0;
+                    border:0;
+                    @include fontsize-14();
+                    color: $color-text-black;
+                    display: block;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    max-width: 100%;
+                    overflow: hidden;
+                }
+                .vs__search{
+                    // display: none;
+                    background: none;
+                    border:0;
+                    @include border-radius-separate(0, 0, 0, 0);
+                    padding: 0;
+                    margin: 0;
+                    box-shadow: none;
+                    width: 15px;
+                    @include fontsize-14();
+                    color: $color-text-black;
+                    @include placeholder {
+                        @include opacity(1);
+                        color: $color-text-grey;
+                    }
+                    &:focus{
+                        box-shadow: none;
+                        border:0;
+                    }
+                }
+            }
+            .vs__actions{
+                padding: 0;
+                margin: 0;
+                @include border-radius-separate(0, 0, 0, 0);
+                .vs__clear{}
+                .vs__open-indicator{
+                    padding: 0;
+                    margin: 0;
+                    border:0;
+                    @include border-radius-separate(0, 0, 0, 0);
+                    min-width: 20px;
+                    height: 20px;
+                    width: 20px;
+                    color: $color-text-black;
+                    >svg{
+                        fill: $color-text-black;
+                        path{
+                            fill: $color-text-black;
+                        }
+                    }
+                }
+                .vs__spinner{
+                    display: none;
+                }
+            }
+        }
+        &.vs--open{
+            .vs__dropdown-toggle{
+                border-color: $color-border-active;
+            }
+        }
+        &.vs--unsearchable{}
+        &.vs--disabled{
+            .vs__dropdown-toggle{
+                background: $color-bg-light-grey;
+                cursor: default;
+            }
+        }
+    }
+    &.--bigger{
+        .vs__dropdown-toggle{
+            padding: 20px 16px 20px 12px;
+        }
+    }
+}
+.vs__dropdown-menu{
+    &.v-select-v2{
+        padding: 10px 0;
+        margin: 4px 0 0 0;
+        background: $color-bg-white;
+        box-shadow: none;
+        @include fontsize-15();
+        color: $color-text-black;
+        border:1px solid $color-border-main;
+        min-height: 32px;
+        max-width: 100%;
+        list-style:none;
+        overflow-y: auto;
+        max-height: 168px;
+        font-family: $font-sans-default;
+        @include border-radius-separate(4px, 4px, 4px, 4px);
+        &::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        &::-webkit-scrollbar-button {
+            width: 10px;
+            height: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $color-special-tooltip;
+            border: 0px none #ffffff;
+            @include border-radius-separate(2px, 2px, 2px, 2px);
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: $color-special-tooltip;
+        }
+        &::-webkit-scrollbar-thumb:active {
+            background: $color-special-tooltip;
+        }
+        &::-webkit-scrollbar-track {
+            background: $color-special-purple-100;
+            border: 0px none #ffffff;
+            @include border-radius-separate(2px, 2px, 2px, 2px);
+        }
+        &::-webkit-scrollbar-track:hover {
+            background: $color-special-purple-100;
+        }
+        &::-webkit-scrollbar-track:active {
+            background: $color-special-purple-100;
+        }
+        &::-webkit-scrollbar-corner {
+            background: transparent;
+        }
+        .vs__dropdown-option{
+            padding: 15px 14px;
+            margin: 0;
+            white-space: normal;
+            color: $color-text-black;
+            @include fontsize-14();
+            font-family: $font-sans-default;
+            &.vs__dropdown-option--deselect{
+                background: $color-bg-blue-grey;
+                color: $color-text-black;
+            }
+            &.vs__dropdown-option--selected{
+                background: $color-bg-blue-grey;
+                font-weight: normal;
+                color: $color-text-black;
+            }
+            &.vs__dropdown-option--highlight{
+                background: $color-bg-blue-grey;
+                color: $color-text-black;
+            }
+            &.vs__dropdown-option--disabled{
+                background: $color-bg-light-grey;
+                color: $color-text-grey;
+            }
+        }
+    }
+}

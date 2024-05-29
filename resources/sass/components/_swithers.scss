@@ -1,0 +1,340 @@
+.swithers-main-container{
+    padding: 0;
+    margin: 28px 0;
+    .row{
+        margin: 0;
+        .col{
+            padding: 0;
+            .swither-item{
+                // padding: 0;
+                // margin: 0 0 0 0;
+                border:0;
+                @include box-shadow(none);
+                height: 100%;
+                padding: 4px 4px 4px 4px;
+                margin: 0;
+                background: $color-bg-white;
+                @include border-radius(4px);
+                >input{
+                    &[type="radio"],
+                    &[type="checkbox"]{
+                        width: 0;
+                        height: 0;
+                        padding: 0;
+                        margin: 0;
+                        border:0;
+                        display: none;
+                        & + label{
+                            padding: 8px 12px;
+                            margin: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            @include border-radius(4px);
+                            >span{
+                                &.text{
+                                    padding: 0;
+                                    margin: 0;
+                                    display: inline-flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-family: $font-sans-default;
+                                    @include fontsize-15();
+                                    color: $color-special-tab;
+                                    @include border-radius(4px);
+                                }
+                            }
+                        }
+                        &:checked{
+                            & + label{
+                                background: $color-special-purple-100;
+                                cursor: default;
+                            }
+                        }
+                    }
+                }
+                >.swither-item-link{
+                    padding: 8px 12px;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    @include border-radius(4px);
+                    outline:0;
+                    border:0;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    text-align: center;
+                    >span{
+                        padding: 0;
+                        margin: 0;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        &.icon{
+                            width: 18px;
+                            min-width: 18px;
+                            >svg{
+                                display: block;
+                                max-width: 100%;
+                                height: auto;
+                            }
+                            & + .text{
+                                margin-left: 8px;
+                            }
+                        }
+                        &.text{
+                            padding: 0;
+                            margin: 0;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-family: $font-sans-default;
+                            @include fontsize-15();
+                            color: $color-text-black;
+                            @include border-radius(4px);
+                            & + .icon{
+                                margin-left: 8px;
+                            }
+                        }
+                    }
+                    &.--disabled{
+                        cursor: default;
+                        background: $color-state-disabled;
+                        >span{
+                            &.text{
+                                color: $color-text-grey;
+                            }
+                            &.icon{
+                                >svg{
+                                    fill: $color-icon-grey;
+                                    path{
+                                        fill: $color-icon-grey;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                >.swither-item-button{
+                    padding: 8px 12px;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    @include border-radius(4px);
+                    outline:0;
+                    border:0;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    width: 100%;
+                    text-align: center;
+                    background: $color-bg-white;
+                    >span{
+                        padding: 0;
+                        margin: 0;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        &.icon{
+                            width: 18px;
+                            min-width: 18px;
+                            >svg{
+                                display: block;
+                                max-width: 100%;
+                                height: auto;
+                            }
+                            & + .text{
+                                margin-left: 8px;
+                            }
+                        }
+                        &.text{
+                            padding: 0;
+                            margin: 0;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-family: $font-sans-default;
+                            @include fontsize-15();
+                            color: $color-text-black;
+                            @include border-radius(4px);
+                            & + .icon{
+                                margin-left: 8px;
+                            }
+                        }
+                    }
+                    &.--disabled{
+                        cursor: default;
+                        background: $color-state-disabled;
+                        >span{
+                            &.text{
+                                color: $color-text-grey;
+                            }
+                            &.icon{
+                                >svg{
+                                    fill: $color-icon-grey;
+                                    path{
+                                        fill: $color-icon-grey;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.--is-active{
+                    >.swither-item-link,
+                    >.swither-item-button{
+                        // background: $color-special-purple-100;
+                        // background: $color-banner-710;
+                        background: linear-gradient(0deg, rgba($color-bg-white, 0.15), rgba($color-bg-white, 0.15)), $color-banner-800;
+                        cursor: default;
+                        >span{
+                            &.text{
+                                color: $color-text-white;
+                            }
+                        }
+                    }
+                }
+                &.--project-experience{
+                    &.--is-active{
+                        >.swither-item-link,
+                        >.swither-item-button{
+                            background: $color-tracks-200;
+                        }
+                    }
+                }
+                &.--project-culture{
+                    &.--is-active{
+                        >.swither-item-link,
+                        >.swither-item-button{
+                            background: $color-tracks-400;
+                        }
+                    }
+                }
+                &.--project-solution{
+                    &.--is-active{
+                        >.swither-item-link,
+                        >.swither-item-button{
+                            background: $color-tracks-600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ul{
+        padding: 4px 4px 4px 4px;
+        margin: 0;
+        list-style:none;
+        border:0;
+        @include box-shadow(none);
+        outline:0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background: $color-special-purple-200;
+        @include border-radius(4px);
+        flex-direction: row;
+        >li{
+            padding: 0;
+            margin: 0 0 0 0;
+            .swither-item{
+                padding: 0;
+                margin: 0 0 0 0;
+                border:0;
+                @include box-shadow(none);
+                >input{
+                    &[type="radio"],
+                    &[type="checkbox"]{
+                        width: 0;
+                        height: 0;
+                        padding: 0;
+                        margin: 0;
+                        border:0;
+                        display: none;
+                        & + label{
+                            padding: 7px 12px;
+                            margin: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            @include border-radius(4px);
+                            >span{
+                                &.text{
+                                    padding: 0;
+                                    margin: 0;
+                                    display: inline-flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-family: $font-sans-default;
+                                    @include fontsize-15();
+                                    color: $color-text-black;
+                                    @include border-radius(4px);
+                                }
+                            }
+                        }
+                        &:checked{
+                            & + label{
+                                background: $color-bg-white;
+                                cursor: default;
+                            }
+                        }
+                    }
+                }
+            }
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+    }
+    &.--with-scroll{
+        overflow-x: auto;
+        margin: 28px 0 13px 0;
+        padding: 0 0 15px 0;
+        @include media(576) {
+            padding-bottom: 0;
+            margin-bottom: 28px;
+        }
+        .row{
+            flex-wrap: nowrap;
+        }
+    }
+    &.--purple-navbar{
+        @include box-shadow(0px 6px 18px rgba($color-bg-black, 0.08));
+        padding-bottom: 0;
+        .row{
+            .col{
+                .swither-item{
+                    &.--is-active{
+                        >.swither-item-link{
+                            // background: linear-gradient(0deg, rgba($color-bg-white, 0.15), rgba($color-bg-white, 0.15)), $color-special-pink;
+                            >span{
+                                &.text{
+                                    font-family: $font-sans-bold;
+                                }
+                            }
+                        }
+                    }
+                    &.--special-purple{}
+                    &.--special-pink{
+                        &.--is-active{
+                            >.swither-item-link{
+                                background: linear-gradient(0deg, rgba($color-bg-white, 0.15), rgba($color-bg-white, 0.15)), $color-special-pink;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

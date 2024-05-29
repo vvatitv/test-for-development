@@ -1,0 +1,43 @@
+*{
+    border:0;
+    padding: 0;
+    margin: 0;
+    outline:0;
+}
+html{
+    position: relative;
+    margin: 0;
+}
+body{
+    color: $color-text-black;
+    font-family: $font-sans-default;
+    font-size:rem(16px);
+    font-weight: normal;
+    line-height: 1.05;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+    margin: 0 auto;
+    background: $color-bg-primary;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    height: 100%;
+    &.--body-quizz{
+        background: $color-bg-primary;
+    }
+}
+strong,
+b{
+    font-family: $font-sans-bold;
+    font-weight: normal;
+}
+a{
+    color: $color-text-link;
+    text-decoration: none;
+    outline:0;
+    text-underline-position: under;
+    &:hover{
+        text-decoration: underline;
+    }
+}

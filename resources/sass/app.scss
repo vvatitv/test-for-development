@@ -1,0 +1,46 @@
+@import 'libraries/bootstrap';
+
+@import 'variables/styles';
+@import 'variables/variables';
+@import 'variables/fonts';
+
+
+@import 'libraries/sweetalert2/default';
+@import 'libraries/vue-select/default';
+@import 'libraries/vue-select/custom';
+@import 'libraries/donut-chart/default';
+@import 'libraries/cool-lightbox/default';
+@import 'libraries/v-tooltip/default';
+// @import 'libraries/autocomplete-vue/default';
+
+@import 'components/fonts';
+@import 'components/backgrounds';
+@import 'components/borders';
+@import 'components/colors';
+@import 'components/html';
+@import 'components/heading';
+@import 'components/forms';
+@import 'components/header';
+@import 'components/main';
+@import 'components/footer';
+@import 'components/alerts';
+@import 'components/sweetAlert';
+@import 'components/returnback';
+@import 'components/banner';
+@import 'components/tooltip';
+@import 'components/swithers';
+@import 'components/modal';
+@import 'components/progress-bar';
+@import 'components/loader';
+@import 'components/cardbox';
+@import 'components/pagination';
+@import 'components/editor';
+
+
+@import 'frontend/auth';
+@import 'frontend/profile';
+@import 'frontend/teams';
+@import 'frontend/tasks';
+@import 'frontend/votes';
+@import 'frontend/ratings';
+@import 'frontend/quizzes';

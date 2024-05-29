@@ -1,0 +1,7 @@
+@import '~sweetalert2/src/variables';
+
+$swal2-toast-show-animation: swal2-toast-show .15s;
+$swal2-toast-hide-animation: swal2-toast-hide .2s;
+
+@import '~sweetalert2/src/sweetalert2';
+@import 'toast-animations';
